@@ -225,20 +225,6 @@ p, li, .section-lead, .lead-text {
   color: var(--text-primary);
 }
 
-.nav-cta {
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  padding: 8px 18px;
-  border-radius: var(--radius-pill);
-  font-weight: 600;
-  transition: opacity var(--transition-fast);
-}
-
-.nav-cta:hover {
-  opacity: 0.9;
-  color: var(--bg-primary);
-}
-
 .nav-actions {
   display: flex;
   align-items: center;
