@@ -3,96 +3,14 @@
  * Clean Editorial Architecture
  * 
  * Modules:
- * 1. Web Audio Synthesizer (Sutil e elegante, com controle de silêncio)
- * 2. View Mode Switcher (Showcase / Simulador / Terminal)
- * 3. Architecture Flow Simulator (Animação de esteira em 4 nós)
- * 4. Embedded Unix CLI Terminal (help, whoami, skills, projects, contact, clear)
- * 5. Deep-Dive Modal System
- * 6. Copy-to-Clipboard Helper
+ * 1. View Mode Switcher (Showcase / Simulador / Terminal)
+ * 2. Architecture Flow Simulator (Animação de esteira em 4 nós)
+ * 3. Embedded Unix CLI Terminal (help, whoami, skills, projects, contact, clear)
+ * 4. Deep-Dive Modal System
  */
 
 // ==========================================================================
-// 1. Web Audio Synthesizer (Zero external dependencies)
-// ==========================================================================
-
-class AudioSynth {
-  constructor() {
-    this.ctx = null;
-    this.muted = false;
-    this.initialized = false;
-  }
-
-  init() {
-    if (this.initialized) return;
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (AudioCtx) {
-        this.ctx = new AudioCtx();
-        this.initialized = true;
-      }
-    } catch (e) {
-      this.muted = true;
-    }
-  }
-
-  tick() {
-    if (this.muted || !this.ctx) return;
-    try {
-      if (this.ctx.state === 'suspended') {
-        this.ctx.resume();
-      }
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(540, this.ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(880, this.ctx.currentTime + 0.04);
-
-      gain.gain.setValueAtTime(0.035, this.ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 0.05);
-
-      osc.connect(gain);
-      gain.connect(this.ctx.destination);
-
-      osc.start();
-      osc.stop(this.ctx.currentTime + 0.05);
-    } catch (e) {}
-  }
-
-  success() {
-    if (this.muted || !this.ctx) return;
-    try {
-      if (this.ctx.state === 'suspended') {
-        this.ctx.resume();
-      }
-      const osc = this.ctx.createOscillator();
-      const gain = this.ctx.createGain();
-
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(440, this.ctx.currentTime);
-      osc.frequency.setValueAtTime(660, this.ctx.currentTime + 0.07);
-
-      gain.gain.setValueAtTime(0.04, this.ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 0.16);
-
-      osc.connect(gain);
-      gain.connect(this.ctx.destination);
-
-      osc.start();
-      osc.stop(this.ctx.currentTime + 0.16);
-    } catch (e) {}
-  }
-
-  toggle() {
-    this.muted = !this.muted;
-    return this.muted;
-  }
-}
-
-const sound = new AudioSynth();
-
-// ==========================================================================
-// 2. View Mode Selector (Showcase / Simulador / Terminal)
+// 1. View Mode Selector (Showcase / Simulador / Terminal)
 // ==========================================================================
 
 function initViewModeSelector() {
@@ -103,9 +21,6 @@ function initViewModeSelector() {
 
   modeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      sound.init();
-      sound.tick();
-
       modeButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -125,26 +40,7 @@ function initViewModeSelector() {
 }
 
 // ==========================================================================
-// 3. Audio Toggle Controller
-// ==========================================================================
-
-function initAudioToggle() {
-  const audioBtn = document.getElementById('audio-toggle');
-  if (!audioBtn) return;
-
-  audioBtn.addEventListener('click', () => {
-    sound.init();
-    const isMuted = sound.toggle();
-    audioBtn.style.opacity = isMuted ? '0.5' : '1';
-    const label = audioBtn.querySelector('.audio-label');
-    if (label) {
-      label.textContent = isMuted ? 'Mudo' : 'Som';
-    }
-  });
-}
-
-// ==========================================================================
-// 4. Interactive Flow Simulator
+// 2. Interactive Flow Simulator
 // ==========================================================================
 
 function initSimulator() {
@@ -162,8 +58,6 @@ function initSimulator() {
   btnRun.addEventListener('click', () => {
     if (isRunning) return;
     isRunning = true;
-    sound.init();
-    sound.tick();
 
     btnRun.disabled = true;
     btnRun.style.opacity = '0.6';
@@ -177,21 +71,18 @@ function initSimulator() {
 
     setTimeout(() => {
       // Step 2: Validation
-      sound.tick();
       statusLog.textContent = '[2/4] Sanitizando CPF, validando telefones e aplicando LGPD...';
       n1?.classList.remove('active-node');
       n2?.classList.add('active-node');
 
       setTimeout(() => {
         // Step 3: Round Robin
-        sound.tick();
         statusLog.textContent = '[3/4] Fila Round-Robin alocando SDR disponível no CRM...';
         n2?.classList.remove('active-node');
         n3?.classList.add('active-node');
 
         setTimeout(() => {
           // Step 4: Database Persistence
-          sound.success();
           statusLog.textContent = '[4/4] Gravado no banco PostgreSQL com sucesso. Transação concluída!';
           n3?.classList.remove('active-node');
           n4?.classList.add('active-node');
@@ -208,7 +99,7 @@ function initSimulator() {
 }
 
 // ==========================================================================
-// 5. Embedded Unix CLI Terminal
+// 3. Embedded Unix CLI Terminal
 // ==========================================================================
 
 function initTerminal() {
@@ -319,9 +210,6 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
     const trimmed = rawInput.trim();
     if (!trimmed) return;
 
-    sound.init();
-    sound.tick();
-
     commandHistory.push(trimmed);
     historyIndex = commandHistory.length;
 
@@ -417,7 +305,7 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
 }
 
 // ==========================================================================
-// 6. Deep-Dive Modal System
+// 4. Deep-Dive Modal System
 // ==========================================================================
 
 function initModals() {
@@ -430,8 +318,6 @@ function initModals() {
       const modalId = btn.getAttribute('data-modal');
       const targetModal = document.getElementById(modalId);
       if (targetModal) {
-        sound.init();
-        sound.tick();
         targetModal.classList.add('active');
         targetModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -472,41 +358,12 @@ function initModals() {
 }
 
 // ==========================================================================
-// 7. Copy-to-Clipboard Utility
-// ==========================================================================
-
-function initCopyEmail() {
-  const btnCopy = document.getElementById('btn-copy-email');
-  if (!btnCopy) return;
-
-  btnCopy.addEventListener('click', () => {
-    const email = 'jonathansacramento57@gmail.com';
-    navigator.clipboard.writeText(email).then(() => {
-      sound.init();
-      sound.success();
-      const orig = btnCopy.textContent;
-      btnCopy.textContent = 'Copiado!';
-      btnCopy.style.background = '#059669';
-      btnCopy.style.color = '#ffffff';
-
-      setTimeout(() => {
-        btnCopy.textContent = orig;
-        btnCopy.style.background = '';
-        btnCopy.style.color = '';
-      }, 2000);
-    });
-  });
-}
-
-// ==========================================================================
 // Initialize on DOM Ready
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   initViewModeSelector();
-  initAudioToggle();
   initSimulator();
   initTerminal();
   initModals();
-  initCopyEmail();
 });
