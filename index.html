@@ -3,1350 +3,831 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weber Caldas | Engenheiro Full Stack & Arquiteto CRM SaaS</title>
-  <meta name="description" content="Portfólio de Weber Caldas (Webber03): Engenheiro de Software Full Stack especializado em arquiteturas SaaS Whitelabel, CRM Multi-tenant, automações com APIs Cloud, VPS Linux e dashboards analíticos.">
-  <meta name="keywords" content="Weber Caldas, Webber03, Desenvolvedor Full Stack, CRM Whitelabel, SaaS, Node.js, PostgreSQL, Docker, Nginx, Google Drive API, ScoutX, Simões Advogados">
-  <meta name="author" content="Weber Caldas">
+  <title>Jonathan Weber | Engenheiro de Software & Analista de Processos</title>
+  <meta name="description" content="Portfólio de Jonathan Weber Sacramento Caldas (Weber Caldas): Engenheiro de Software e Analista de Processos e Tecnologia. Especialista em CRM SaaS Whitelabel, automação operacional, APIs e infraestrutura em nuvem.">
+  <meta name="keywords" content="Jonathan Weber, Weber Caldas, Analista de Processos, Engenheiro de Software, CRM SaaS Whitelabel, LF Promotora, Ford Enter, SENAI CIMATEC, UCSAL, ScoutX">
+  <meta name="author" content="Jonathan Weber Sacramento Caldas">
 
-  <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Weber Caldas | Engenheiro Full Stack & Arquiteto CRM SaaS">
-  <meta property="og:description" content="Sistemas CRM SaaS escaláveis, matriz multi-tenant isolada, duplo funil de vendas (SDR/Closer), integrações Cloud e infraestrutura de alta disponibilidade.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jonathan Weber | Engenheiro de Software & Analista de Processos">
+  <meta property="og:description" content="Unindo inteligência de processos, visão comercial e engenharia de software para construir plataformas escaláveis e de alta produtividade.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://github.com/Webber03">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>W</text></svg>">
 
-  <!-- Google Fonts: Syne (Luxury Editorial), Outfit, Plus Jakarta Sans, JetBrains Mono -->
+  <!-- Google Fonts: Syne, Outfit, Albert Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="theme-dark">
-  <!-- Custom Ambient Cursor Glow -->
-  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-
-  <!-- Background Mesh & Canvas Atmosphere -->
-  <div class="bg-mesh" aria-hidden="true"></div>
-  <div class="bg-orb orb-1" aria-hidden="true"></div>
-  <div class="bg-orb orb-2" aria-hidden="true"></div>
-  <div class="bg-grid-lines" aria-hidden="true"></div>
-
-  <!-- Top Announcement Bar / Live Status Ticker -->
-  <div class="top-announcement" id="announcement-bar">
+<body>
+  <!-- Top Announcement Bar -->
+  <aside class="top-announcement" id="announcement-bar" aria-label="Status do Sistema">
     <div class="announcement-content">
-      <span class="live-pulse"></span>
+      <span class="live-status-dot"></span>
       <span class="announcement-text">
-        <strong>STATUS DE PRODUÇÃO:</strong> 4 Instâncias Ativas no VPS Linux • Uptime 99.9% • Conexões PostgreSQL Seguras • Google Drive v3 Operacional
+        <strong>STATUS OPERACIONAL:</strong> Sistemas ativos em produção • Instâncias VPS operacionais • Uptime 99.9% • Salvador, BA
       </span>
       <a href="https://github.com/Webber03" target="_blank" rel="noopener noreferrer" class="announcement-link">
-        GitHub @Webber03 ↗
+        GitHub @Webber03
       </a>
     </div>
-  </div>
+  </aside>
 
-  <!-- Main Navigation Bar -->
+  <!-- Navbar -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-brand" id="brand-link" aria-label="Weber Caldas Home">
+      <a href="#hero" class="nav-brand" id="brand-link" aria-label="Jonathan Weber Início">
         <span class="brand-badge">&lt;WC/&gt;</span>
         <div class="brand-text-group">
-          <span class="brand-name">Weber Caldas</span>
-          <span class="brand-role">Software Architect</span>
+          <span class="brand-name">Jonathan Weber</span>
+          <span class="brand-role">Software & Process Engineer</span>
         </div>
       </a>
 
-      <!-- View Mode Selector (Editorial vs Simulator vs Terminal) -->
-      <div class="view-mode-selector" id="view-mode-selector" role="radiogroup" aria-label="Modo de Exibição">
-        <button class="mode-btn active" data-mode="editorial" title="Modo Visual & Editorial">
-          <span class="mode-icon">✦</span>
-          <span class="mode-label">Showcase</span>
+      <!-- View Mode Selector -->
+      <div class="view-mode-selector" id="view-mode-selector" role="radiogroup" aria-label="Modo de Visualização">
+        <button class="mode-btn active" data-mode="editorial" title="Modo Editorial e Portfólio">
+          <svg class="mode-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+          <span>Showcase</span>
         </button>
-        <button class="mode-btn" data-mode="simulator" title="Simulador de Fluxo de Arquitetura">
-          <span class="mode-icon">⚡</span>
-          <span class="mode-label">Simulador</span>
+        <button class="mode-btn" data-mode="simulator" title="Simulador Interativo de Arquitetura">
+          <svg class="mode-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Simulador</span>
         </button>
         <button class="mode-btn" data-mode="terminal" title="Terminal Unix Interativo">
-          <span class="mode-icon">&gt;_</span>
-          <span class="mode-label">Terminal</span>
+          <svg class="mode-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          <span>Terminal</span>
         </button>
       </div>
 
       <!-- Navigation Links -->
-      <nav class="nav-links" id="nav-links" aria-label="Navegação Principal">
-        <a href="#journey" class="nav-link">Trajetória</a>
-        <a href="#projects" class="nav-link">Projetos <span class="nav-count">11</span></a>
-        <a href="#architecture" class="nav-link">Arquitetura</a>
-        <a href="#skills" class="nav-link">Stack</a>
-        <a href="#contact" class="nav-link nav-cta">Falar Comigo</a>
+      <nav class="nav-links" aria-label="Navegação Principal">
+        <a href="#skills-interpessoais" class="nav-link">Habilidades</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#arquitetura" class="nav-link">Arquitetura</a>
+        <a href="#trajetoria" class="nav-link">Trajetória</a>
+        <a href="#contato" class="nav-link nav-cta">Falar Comigo</a>
       </nav>
 
-      <!-- Right Action Controls -->
+      <!-- Actions -->
       <div class="nav-actions">
-        <!-- Audio Synthesizer Toggle -->
-        <button class="audio-toggle" id="audio-toggle" aria-label="Ativar / Desativar Sons da Interface" title="Sons de Interface Web Audio">
-          <span class="audio-icon audio-muted">🔇</span>
-          <span class="audio-label">Sound</span>
+        <button class="audio-toggle" id="audio-toggle" aria-label="Alternar áudio da interface" title="Feedback Sonoro Web Audio">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          <span class="audio-label">Som</span>
         </button>
-
-        <!-- Social Quick Links -->
-        <a href="https://github.com/Webber03" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Perfil GitHub @Webber03" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <a href="https://github.com/Webber03" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub @Webber03" aria-label="GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/weber-dev/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Perfil LinkedIn @weber-dev" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <a href="https://www.linkedin.com/in/weber-dev/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn @weber-dev" aria-label="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
         </a>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu Mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION (Editorial, Bold Statement & Luxury Lighting) -->
-    <section class="hero-section" id="hero">
-      <div class="hero-glow-back"></div>
-      <div class="container hero-container">
-        
-        <!-- Top Editorial Badge -->
-        <div class="hero-badge-wrapper">
-          <div class="hero-pill">
-            <span class="pill-dot"></span>
-            <span class="pill-text">ENGENHEIRO FULL STACK & ARQUITETO DE CRM SAAS</span>
-            <span class="pill-code">VPS • POSTGRES • NODE</span>
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-credentials-strip">
+              <span class="credential-pill">LF Promotora (2022 - Atual)</span>
+              <span class="credential-pill">Ford &lt;Enter&gt; / SENAI CIMATEC</span>
+              <span class="credential-pill">Engenharia de Software (UCSAL)</span>
+            </div>
+
+            <h1 class="hero-title">
+              Engenharia de software voltada para eficiência operacional real.
+              <span class="title-accent">Jonathan Weber Caldas</span>
+            </h1>
+
+            <p class="hero-lead">
+              Analista de processos e tecnologia com forte perfil analítico e comunicativo. Atuo na intersecção entre as dores comerciais da empresa e a arquitetura de software: desenvolvendo ferramentas sob medida, automações inteligentes de fluxo, matrizes CRM SaaS e integrações em nuvem.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projetos" class="btn-primary">
+                <span>Ver Projetos Selecionados</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="#skills-interpessoais" class="btn-secondary">
+                <span>Minhas Habilidades</span>
+              </a>
+            </div>
           </div>
+
+          <div class="hero-visual">
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="avatar-wrapper">
+                  <img src="avatar.jpg" alt="Foto de Jonathan Weber Sacramento Caldas" class="avatar-img" width="96" height="96">
+                </div>
+                <div class="profile-identity">
+                  <span class="profile-full-name">Jonathan Weber</span>
+                  <span class="profile-title">Process & Software Specialist</span>
+                  <div class="profile-location">
+                    <span class="location-dot"></span>
+                    <span>Salvador, Bahia — Brasil</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-meta-list">
+                <div class="profile-meta-row">
+                  <span class="meta-label">Cargo Atual</span>
+                  <span class="meta-value">Analista de Processos e Tecnologia</span>
+                </div>
+                <div class="profile-meta-row">
+                  <span class="meta-label">Organização</span>
+                  <span class="meta-value">LF Promotora</span>
+                </div>
+                <div class="profile-meta-row">
+                  <span class="meta-label">Formação Base</span>
+                  <span class="meta-value">SENAI CIMATEC + UCSAL</span>
+                </div>
+                <div class="profile-meta-row">
+                  <span class="meta-label">Foco Principal</span>
+                  <span class="meta-value">CRM SaaS, Automação & UX Operacional</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-        <!-- Main Headline -->
-        <h1 class="hero-headline">
-          Transformando <span class="gradient-text">ecossistemas comerciais</span> em software escalável, multi-tenant e blindado.
-        </h1>
-
-        <!-- Editorial Subtitle -->
-        <p class="hero-subtext">
-          Concepção e deploy de plataformas proprietárias SaaS Whitelabel, arquiteturas com bancos de dados isolados por cliente, duplo funil de vendas (SDR/Closer), automações com Google Drive API v3 e microsserviços em servidores Linux VPS.
-        </p>
-
-        <!-- Call-to-Actions -->
-        <div class="hero-cta-group">
-          <a href="#projects" class="btn btn-primary" id="btn-explore-projects">
-            <span>Explorar Projetos & Cases</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <button class="btn btn-terminal" id="btn-open-terminal-hero">
-            <span class="btn-term-prefix">&gt;_</span>
-            <span>Abrir Terminal CLI</span>
-          </button>
-          <a href="https://api.whatsapp.com/send?phone=5571999999999&text=Ol%C3%A1%20Weber!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="btn btn-glass" id="btn-whatsapp-hero">
-            <span>Conversar via WhatsApp</span>
-          </a>
-        </div>
-
-        <!-- Metrics Grid Cards (Ousmane Dembélé Inspired Stats) -->
-        <div class="hero-metrics-bar">
-          <div class="metric-item">
-            <div class="metric-top">
-              <span class="metric-val counter" data-target="4">0</span><span class="metric-suffix">+</span>
-            </div>
-            <div class="metric-title">Instâncias em Produção</div>
-            <div class="metric-desc">Simões, ITACRED, Dr. Jéssica & Educred</div>
-          </div>
-          <div class="metric-separator"></div>
-
-          <div class="metric-item">
-            <div class="metric-top">
-              <span class="metric-val counter" data-target="11">0</span><span class="metric-suffix">+</span>
-            </div>
-            <div class="metric-title">Projetos & Repositórios</div>
-            <div class="metric-desc">Do Core Whitelabel a Prospecção e BI</div>
-          </div>
-          <div class="metric-separator"></div>
-
-          <div class="metric-item">
-            <div class="metric-top">
-              <span class="metric-val counter" data-target="100">0</span><span class="metric-suffix">%</span>
-            </div>
-            <div class="metric-title">Isolamento Multi-Tenant</div>
-            <div class="metric-desc">Zero vazamento de dados entre empresas</div>
-          </div>
-          <div class="metric-separator"></div>
-
-          <div class="metric-item">
-            <div class="metric-top">
-              <span class="metric-val counter" data-target="99.9">0</span><span class="metric-suffix">%</span>
-            </div>
-            <div class="metric-title">Uptime & Monitoramento</div>
-            <div class="metric-desc">Reverse Proxy Nginx + PM2 Daemon</div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- INFINITE MARQUEE TICKER (Luxury Ribbon) -->
-    <div class="marquee-strip" aria-hidden="true">
-      <div class="marquee-track">
-        <div class="marquee-content">
-          <span>SAAS WHITELABEL MATRIX</span>
-          <span class="m-dot">✦</span>
-          <span>POSTGRESQL ISOLATED POOLS</span>
-          <span class="m-dot">✦</span>
+    <!-- COMPETENCE STATIC RIBBON (Anti-Marquee Clean Layout) -->
+    <div class="competence-ribbon" aria-label="Áreas de Competência">
+      <div class="container">
+        <div class="competence-list">
+          <span>MATRIZ SAAS WHITELABEL</span>
+          <span class="comp-sep">•</span>
+          <span>INTELIGÊNCIA DE PROCESSOS</span>
+          <span class="comp-sep">•</span>
+          <span>POSTGRESQL ISOLADO</span>
+          <span class="comp-sep">•</span>
           <span>GOOGLE DRIVE API V3 & OAUTH2</span>
-          <span class="m-dot">✦</span>
-          <span>SDR + CLOSER DOUBLE FUNNEL</span>
-          <span class="m-dot">✦</span>
-          <span>ROUND-ROBIN LEAD DISPATCH</span>
-          <span class="m-dot">✦</span>
-          <span>UBUNTU VPS & NGINX SSL</span>
-          <span class="m-dot">✦</span>
+          <span class="comp-sep">•</span>
+          <span>DUPLO FUNIL SDR & CLOSER</span>
+          <span class="comp-sep">•</span>
           <span>SCOUTX DATA PROSPECTION</span>
-          <span class="m-dot">✦</span>
-          <span>LGPD BANK-GRADE COMPLIANCE</span>
-          <span class="m-dot">✦</span>
-          <span>PM2 CLUSTER MANAGEMENT</span>
-          <span class="m-dot">✦</span>
-        </div>
-        <div class="marquee-content" aria-hidden="true">
-          <span>SAAS WHITELABEL MATRIX</span>
-          <span class="m-dot">✦</span>
-          <span>POSTGRESQL ISOLATED POOLS</span>
-          <span class="m-dot">✦</span>
-          <span>GOOGLE DRIVE API V3 & OAUTH2</span>
-          <span class="m-dot">✦</span>
-          <span>SDR + CLOSER DOUBLE FUNNEL</span>
-          <span class="m-dot">✦</span>
-          <span>ROUND-ROBIN LEAD DISPATCH</span>
-          <span class="m-dot">✦</span>
-          <span>UBUNTU VPS & NGINX SSL</span>
-          <span class="m-dot">✦</span>
-          <span>SCOUTX DATA PROSPECTION</span>
-          <span class="m-dot">✦</span>
-          <span>LGPD BANK-GRADE COMPLIANCE</span>
-          <span class="m-dot">✦</span>
-          <span>PM2 CLUSTER MANAGEMENT</span>
-          <span class="m-dot">✦</span>
+          <span class="comp-sep">•</span>
+          <span>COMPLIANCE LGPD</span>
+          <span class="comp-sep">•</span>
+          <span>UBUNTU VPS & NGINX</span>
         </div>
       </div>
     </div>
 
-    <!-- ENGINEERING TIMELINE & CHAPTERS (Inspired by ousmaneballondor.fr's career journey chapters) -->
-    <section class="section journey-section" id="journey">
+    <!-- HABILIDADES INTERPESSOAIS & DIFERENCIAIS DE NEGÓCIO -->
+    <section class="section section-alt" id="skills-interpessoais">
       <div class="container">
-        <div class="section-badge-center">
-          <span class="sub-badge">TRAJETÓRIA & ENGENHARIA</span>
+        <div class="section-header">
+          <h2 class="editorial-title">
+            Habilidades Interpessoais & Atuação Estratégica
+          </h2>
+          <p class="section-lead">
+            Tecnologia só gera valor quando resolve gargalos humanos e de negócios. Minha atuação combina comunicação assertiva, visão de processos e capacidade técnica comprovada na prática.
+          </p>
         </div>
-        <h2 class="editorial-title text-center">
-          Os Capítulos da Construção de Software
-        </h2>
-        <p class="section-lead text-center">
-          Uma evolução sistemática: desde algoritmos puros e conformidade LGPD até plataformas corporativas com milhares de leads transacionados.
-        </p>
 
-        <!-- Timeline Chapters Grid -->
+        <div class="skills-focus-grid">
+          
+          <div class="skill-focus-card">
+            <div class="skill-card-head">
+              <span class="skill-card-num">01</span>
+              <h3 class="skill-card-title">Ponte Negócio-Engenharia</h3>
+            </div>
+            <p class="skill-card-desc">
+              Facilidade em sentar ao lado de equipes comerciais, operacionais e lideranças para traduzir dores de rotina em especificações técnicas e soluções digitais diretas, sem ruído de comunicação.
+            </p>
+          </div>
+
+          <div class="skill-focus-card">
+            <div class="skill-card-head">
+              <span class="skill-card-num">02</span>
+              <h3 class="skill-card-title">Resolução Pragmática</h3>
+            </div>
+            <p class="skill-card-desc">
+              Mentalidade orientada a resultados rápidos. Responsável por projetar e colocar no ar um sistema próprio na LF Promotora que alavancou expressivamente a produtividade da equipe comercial.
+            </p>
+          </div>
+
+          <div class="skill-focus-card">
+            <div class="skill-card-head">
+              <span class="skill-card-num">03</span>
+              <h3 class="skill-card-title">Aprendizado Contínuo</h3>
+            </div>
+            <p class="skill-card-desc">
+              Evolução acelerada aliando a base do SENAI CIMATEC (Técnico e Programa Ford &lt;Enter&gt;) ao curso superior em Engenharia de Software na UCSAL, sempre testando novos conceitos em produção.
+            </p>
+          </div>
+
+          <div class="skill-focus-card">
+            <div class="skill-card-head">
+              <span class="skill-card-num">04</span>
+              <h3 class="skill-card-title">Empatia com o Usuário</h3>
+            </div>
+            <p class="skill-card-desc">
+              Construção de fluxos que respeitam o tempo de quem opera. Criação de interfaces com menos cliques, automações que evitam redigitação e alertas visuais que impedem perda de negócios.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS SELECIONADOS (CURATED FLAGSHIPS) -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="editorial-title">
+            Projetos Selecionados & Repositórios de Destaque
+          </h2>
+          <p class="section-lead">
+            Uma curadoria dos principais sistemas desenvolvidos: arquiteturas matriz multi-tenant, ferramentas de prospecção em nuvem e infraestruturas escaláveis em produção.
+          </p>
+        </div>
+
+        <div class="curated-projects-list">
+          
+          <!-- Flagship 1: Atendimento CRM Whitelabel -->
+          <article class="curated-project-card">
+            <div class="project-info">
+              <span class="project-badge-tag">Plataforma Matriz • Multi-Tenant</span>
+              <h3 class="project-card-title">Atendimento CRM SaaS Whitelabel</h3>
+              <p class="project-card-desc">
+                Plataforma corporativa central desenvolvida para múltiplos inquilinos com isolamento completo de banco de dados. Implementa motor comercial com duplo funil de vendas (SDR e Closer), distribuição equitativa de leads por algoritmo Round-Robin e injeção dinâmica de identidade visual de cada cliente corporativo.
+              </p>
+
+              <div class="project-specs-list">
+                <div class="spec-item">
+                  <strong>Instâncias Ativas Sustentadas:</strong> Simões Advogados (Jurídico), Itacred (Crédito), Drª Jéssica (Saúde/Perícias) e Educred.
+                </div>
+                <div class="spec-item">
+                  <strong>Arquitetura de Dados:</strong> Bancos PostgreSQL dedicados com pools PgPool individuais e isolamento de segurança estrito.
+                </div>
+                <div class="spec-item">
+                  <strong>Governança de Acesso:</strong> Autenticação stateless JWT com RBAC de 4 níveis (Admin, Supervisor, Closer, SDR).
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-details" data-modal="modal-whitelabel">
+                  <span>Ver Detalhes da Arquitetura</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </button>
+                <a href="https://github.com/Webber03/atendimento" target="_blank" rel="noopener noreferrer" class="btn-github">
+                  <span>Repositório GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-blueprint-panel">
+              <div class="blueprint-header">
+                <span>BLUEPRINT DE FLUXO MULTI-TENANT</span>
+                <span>STATUS: OPERACIONAL</span>
+              </div>
+              <div class="blueprint-diagram">
+                <div class="blueprint-node">
+                  <span class="node-title">1. Requisição do Usuário</span>
+                  <span class="node-state">DNS / Tenant Resolvido</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">2. Whitelabel Config Injector</span>
+                  <span class="node-state">/api/whitelabel/config</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">3. Router Duplo Funil (SDR/Closer)</span>
+                  <span class="node-state">Round-Robin Ativo</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">4. PostgreSQL Pool Isolado</span>
+                  <span class="node-state">Porta & Credenciais Únicas</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Flagship 2: ScoutX -->
+          <article class="curated-project-card">
+            <div class="project-info">
+              <span class="project-badge-tag">Aplicação em Produção • TypeScript & React</span>
+              <h3 class="project-card-title">ScoutX — Inteligência de Prospecção</h3>
+              <p class="project-card-desc">
+                Plataforma moderna de prospecção e análise de dados desenvolvida em TypeScript e ecossistema React. Conta com renderização dinâmica otimizada, filtragem de registros em tempo real e visualização analítica para alimentação de pipelines comerciais.
+              </p>
+
+              <div class="project-specs-list">
+                <div class="spec-item">
+                  <strong>Deploy em Produção:</strong> Hospedagem em nuvem Vercel de alta performance com CI/CD contínuo via GitHub.
+                </div>
+                <div class="spec-item">
+                  <strong>Stack Técnica:</strong> TypeScript estrito, componentização modular em React e integração REST API.
+                </div>
+                <div class="spec-item">
+                  <strong>Impacto no Negócio:</strong> Redução significativa do tempo de triagem manual de dados para o time comercial.
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://scoutx-final.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-details">
+                  <span>Acessar ScoutX em Produção</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/Webber03/Scoutx-Final" target="_blank" rel="noopener noreferrer" class="btn-github">
+                  <span>Repositório GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-blueprint-panel">
+              <div class="blueprint-header">
+                <span>ESTRUTURA DE DADOS SCOUTX</span>
+                <span>STATUS: LIVE NA NUVEM</span>
+              </div>
+              <div class="blueprint-diagram">
+                <div class="blueprint-node">
+                  <span class="node-title">1. Entrada de Critérios de Busca</span>
+                  <span class="node-state">Filtros Dinâmicos</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">2. Sanitização & Normalização</span>
+                  <span class="node-state">Tipagem Estrita</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">3. Visualização & Grid Analítico</span>
+                  <span class="node-state">Renderização Otimizada</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Flagship 3: Automações Internas LF Promotora -->
+          <article class="curated-project-card">
+            <div class="project-info">
+              <span class="project-badge-tag">Operação Corporativa • Impacto Real</span>
+              <h3 class="project-card-title">Sistema de Operações & Automações Comerciais</h3>
+              <p class="project-card-desc">
+                Solução concebida internamente para apoiar equipes comerciais e operacionais na LF Promotora. Envolve o desenvolvimento de rotinas em scripts personalizados, integração de APIs e manipulação avançada de dados de crédito consignado para eliminar tarefas manuais exaustivas.
+              </p>
+
+              <div class="project-specs-list">
+                <div class="spec-item">
+                  <strong>Evolução do Processo:</strong> Substituição de controles manuais dispersos por um sistema centralizado e confiável.
+                </div>
+                <div class="spec-item">
+                  <strong>Aumento de Eficiência:</strong> Respostas muito mais ágeis para clientes e fechamento de contratos em fração do tempo anterior.
+                </div>
+                <div class="spec-item">
+                  <strong>Governança de Dados:</strong> Validação em tempo real de documentos e parâmetros de crédito.
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-details" data-modal="modal-operacional">
+                  <span>Ver Resumo de Impacto</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="project-blueprint-panel">
+              <div class="blueprint-header">
+                <span>FLUXO DE AUTOMAÇÃO DE PROCESSOS</span>
+                <span>PRODUÇÃO INTERNA</span>
+              </div>
+              <div class="blueprint-diagram">
+                <div class="blueprint-node">
+                  <span class="node-title">1. Entrada de Dados / Demandas</span>
+                  <span class="node-state">APIs Comerciais</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">2. Motor de Processamento & Scripts</span>
+                  <span class="node-state">Tratamento de Dados</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">3. Esteira Operacional Automatizada</span>
+                  <span class="node-state">Zero Retrabalho Manual</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Flagship 4: Infraestrutura VPS & Google Cloud APIs -->
+          <article class="curated-project-card">
+            <div class="project-info">
+              <span class="project-badge-tag">DevOps & Cloud • Alta Disponibilidade</span>
+              <h3 class="project-card-title">Infraestrutura VPS Linux & Google Drive API Vault</h3>
+              <p class="project-card-desc">
+                Arquitetura de servidores em produção configurada em Linux VPS com gerenciamento de processos via PM2 e proxy reverso Nginx com certificados SSL TLS 1.3 automáticos. Integração avançada com a API Google Drive v3 (OAuth2) para armazenamento seguro e sincronização de documentos jurídicos e bancários criptografados.
+              </p>
+
+              <div class="project-specs-list">
+                <div class="spec-item">
+                  <strong>Cluster de Processos:</strong> PM2 com reinicialização resiliente e monitoramento de consumo de memória.
+                </div>
+                <div class="spec-item">
+                  <strong>Armazenamento em Nuvem:</strong> Upload assíncrono em chunks com controle rigoroso de permissões e pastas isoladas por cliente.
+                </div>
+                <div class="spec-item">
+                  <strong>Segurança e Rede:</strong> Nginx com headers HTTP de segurança (HSTS, CSP), rate limiting e portas de banco isoladas.
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn-details" data-modal="modal-infra">
+                  <span>Ver Especificações Técnicas</span>
+                </button>
+                <a href="https://github.com/Webber03/atendi-simoesadv" target="_blank" rel="noopener noreferrer" class="btn-github">
+                  <span>Instância Simões Advogados</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-blueprint-panel">
+              <div class="blueprint-header">
+                <span>STACK DE INFRAESTRUTURA EM NUVEM</span>
+                <span>SERVIDORES ATIVOS</span>
+              </div>
+              <div class="blueprint-diagram">
+                <div class="blueprint-node">
+                  <span class="node-title">1. Nginx Reverse Proxy</span>
+                  <span class="node-state">SSL TLS 1.3 / Port 443</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">2. PM2 Node.js Cluster</span>
+                  <span class="node-state">Instances :3001, :3003</span>
+                </div>
+                <div class="blueprint-arrow">↓</div>
+                <div class="blueprint-node">
+                  <span class="node-title">3. Google Drive v3 Service</span>
+                  <span class="node-state">OAuth2 Token Refresh</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARQUITETURA & INFRAESTRUTURA DE PRODUÇÃO -->
+    <section class="section section-alt" id="arquitetura">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="editorial-title">
+            Arquitetura de Produção em Alta Disponibilidade
+          </h2>
+          <p class="section-lead">
+            Como cada componente do ecossistema se conecta: do apontamento de DNS à persistência isolada em banco de dados e nuvem Google.
+          </p>
+        </div>
+
+        <div class="infra-grid">
+          
+          <div class="infra-card">
+            <div class="infra-header">
+              <span class="infra-tag">MULTI-TENANCY</span>
+            </div>
+            <h3 class="infra-title">Isolamento Físico de Banco</h3>
+            <p class="infra-desc">
+              Cada cliente corporativo possui seu próprio banco de dados PostgreSQL com credenciais, portas e pools independentes. Vazamento entre inquilinos é fisicamente impossível no nível de conexão.
+            </p>
+          </div>
+
+          <div class="infra-card">
+            <div class="infra-header">
+              <span class="infra-tag">GOOGLE CLOUD</span>
+            </div>
+            <h3 class="infra-title">Cofre de Documentos v3</h3>
+            <p class="infra-desc">
+              Integração via OAuth2 com a API do Google Drive v3 com renovação automática de tokens via refresh token. Upload assíncrono de contratos, relatórios e documentos com validação de formato e hash MD5.
+            </p>
+          </div>
+
+          <div class="infra-card">
+            <div class="infra-header">
+              <span class="infra-tag">MOTOR DE VENDAS</span>
+            </div>
+            <h3 class="infra-title">Pipeline Duplo SDR / Closer</h3>
+            <p class="infra-desc">
+              Mecanismo que separa a qualificação prévia (SDR) do fechamento (Closer). Leads são despachados de forma equitativa por fila Round-Robin com monitoramento de tempo de resposta em tempo real.
+            </p>
+          </div>
+
+          <div class="infra-card">
+            <div class="infra-header">
+              <span class="infra-tag">LINUX SERVER</span>
+            </div>
+            <h3 class="infra-title">Resiliência Operacional PM2</h3>
+            <p class="infra-desc">
+              Servidor Ubuntu Linux dedicado rodando processos gerenciados por cluster PM2 com reinicialização em falha, rotação de logs e proxy Nginx roteando tráfego por cabeçalhos de domínio.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SIMULADOR INTERATIVO DE ARQUITETURA -->
+    <section class="section simulator-section" id="simulador-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="editorial-title">
+            Simulador de Arquitetura & Fluxo de Dados
+          </h2>
+          <p class="section-lead">
+            Veja na prática como uma requisição de lead é processada através dos módulos da matriz até ser gravada com segurança no banco dedicado.
+          </p>
+        </div>
+
+        <div class="simulator-box">
+          <div class="sim-toolbar">
+            <button class="sim-btn-play" id="btn-run-sim">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Disparar Fluxo de Lead</span>
+            </button>
+            <div class="sim-status-log" id="sim-status-log">
+              Aguardando início da simulação...
+            </div>
+          </div>
+
+          <div class="sim-stage">
+            <div class="sim-node" id="sim-node-1">
+              <span class="sim-node-label">NÓ 01</span>
+              <span class="sim-node-name">1. Entrada do Lead</span>
+              <span class="sim-node-sub">Web Form / API Inbound</span>
+            </div>
+
+            <div class="sim-node" id="sim-node-2">
+              <span class="sim-node-label">NÓ 02</span>
+              <span class="sim-node-name">2. Validação & LGPD</span>
+              <span class="sim-node-sub">Sanitização CPF / E.164</span>
+            </div>
+
+            <div class="sim-node" id="sim-node-3">
+              <span class="sim-node-label">NÓ 03</span>
+              <span class="sim-node-name">3. Round-Robin Dispatch</span>
+              <span class="sim-node-sub">Alocação SDR Ativo</span>
+            </div>
+
+            <div class="sim-node" id="sim-node-4">
+              <span class="sim-node-label">NÓ 04</span>
+              <span class="sim-node-name">4. Banco PostgreSQL</span>
+              <span class="sim-node-sub">Persistência Isolada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERMINAL CLI INTERATIVO -->
+    <section class="section" id="terminal-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="editorial-title">
+            Terminal Unix Interativo
+          </h2>
+          <p class="section-lead">
+            Inspirado na estética clássica de terminais Unix: navegue pelas informações de projetos, habilidades e contato digitando comandos.
+          </p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="tdot tdot-red"></span>
+              <span class="tdot tdot-yellow"></span>
+              <span class="tdot tdot-green"></span>
+            </div>
+            <span class="terminal-title-text">weber@vps-production:~ (bash)</span>
+            <div></div>
+          </div>
+
+          <div class="terminal-body" id="term-output">
+            <div class="terminal-welcome">
+              Bem-vindo ao console de Weber Caldas [Jonathan Weber].<br>
+              Digite <strong>help</strong> para ver a lista de comandos disponíveis ou <strong>projects</strong> para inspecionar os repositórios.
+            </div>
+
+            <div class="terminal-prompt-row">
+              <span class="term-prompt-symbol">weber@vps:~$</span>
+              <input type="text" class="term-input" id="terminal-cli-input" placeholder="Digite um comando (ex: help, projects, skills)..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO & TRAJETÓRIA -->
+    <section class="section section-alt" id="trajetoria">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="editorial-title">
+            Trajetória Acadêmica & Profissional
+          </h2>
+          <p class="section-lead">
+            Consistência na evolução técnica e operacional ao longo dos anos.
+          </p>
+        </div>
+
         <div class="journey-chapters">
           
-          <!-- Chapter 1 -->
-          <article class="chapter-card" data-step="1">
+          <div class="chapter-card">
             <div class="chapter-header">
               <span class="chapter-num">01</span>
-              <span class="chapter-period">Fundações & Compliance</span>
+              <span class="chapter-period">2021 — 2022</span>
             </div>
-            <h3 class="chapter-title">Validação & Governança de Dados</h3>
+            <h3 class="chapter-title">Técnico Integrado em Desenvolvimento</h3>
             <p class="chapter-desc">
-              Desenvolvimento de bibliotecas estruturadas de sanitização, algoritmos de validação de CPF e documentos bancários (<code class="inline-code">validador</code>) e implementação estrita da Lei Geral de Proteção de Dados (<code class="inline-code">SPRINT_LGPD</code>) com hashing criptográfico e trilha de auditoria.
+              Formação no <strong>SENAI CIMATEC</strong>. Fundamentos de algoritmos, lógica estruturada, bancos de dados relacionais e modelagem de sistemas.
             </p>
-            <div class="chapter-tags">
-              <span>validador</span>
-              <span>SPRINT_LGPD</span>
-              <span>phpredirect</span>
-            </div>
-          </article>
+          </div>
 
-          <!-- Chapter 2 -->
-          <article class="chapter-card" data-step="2">
+          <div class="chapter-card">
             <div class="chapter-header">
               <span class="chapter-num">02</span>
-              <span class="chapter-period">O Motor Comercial</span>
+              <span class="chapter-period">2022 — Atual</span>
             </div>
-            <h3 class="chapter-title">Core Engine de Atendimento</h3>
+            <h3 class="chapter-title">Analista de Processos e Tecnologia</h3>
             <p class="chapter-desc">
-              Concepção do repositório central <code class="inline-code">atendimento</code>: pipeline de duplo funil separando Pré-Vendas (SDR) e Fechamento (Closer), algoritmo Round-Robin de distribuição equitativa de leads e monitoramento de SLA com alertas visuais em tempo real.
+              Atuação estratégica na <strong>LF Promotora</strong>. Início em suporte e automações simples, evoluindo para a criação de sistemas internos de grande impacto comercial.
             </p>
-            <div class="chapter-tags">
-              <span>atendimento</span>
-              <span>Duplo Funil</span>
-              <span>Round-Robin</span>
-            </div>
-          </article>
+          </div>
 
-          <!-- Chapter 3 -->
-          <article class="chapter-card" data-step="3">
+          <div class="chapter-card">
             <div class="chapter-header">
               <span class="chapter-num">03</span>
-              <span class="chapter-period">Arquitetura Matriz</span>
+              <span class="chapter-period">2025</span>
             </div>
-            <h3 class="chapter-title">Plataforma SaaS Whitelabel</h3>
+            <h3 class="chapter-title">Formação Front-end Ford &lt;Enter&gt;</h3>
             <p class="chapter-desc">
-              Desacoplamento completo do código frontend e backend. Injeção de marca dinâmica (<code class="inline-code">/api/whitelabel/config</code>), bancos PostgreSQL dedicados por cliente, autenticação JWT com níveis RBAC e scripts de migração automatizados para subida de instâncias em minutos.
+              Programa intensivo de tecnologia e desenvolvimento web moderno realizado pelo <strong>SENAI CIMATEC</strong> em parceria com a <strong>Ford Motor Company</strong>.
             </p>
-            <div class="chapter-tags">
-              <span>Multi-Tenant</span>
-              <span>PgPool</span>
-              <span>Whitelabel API</span>
-            </div>
-          </article>
+          </div>
 
-          <!-- Chapter 4 -->
-          <article class="chapter-card featured-chapter" data-step="4">
+          <div class="chapter-card">
             <div class="chapter-header">
               <span class="chapter-num">04</span>
-              <span class="chapter-period">Ambiente de Produção</span>
+              <span class="chapter-period">2026 — Atual</span>
             </div>
-            <h3 class="chapter-title">Instâncias Dedicadas em VPS</h3>
+            <h3 class="chapter-title">Bacharelado em Engenharia de Software</h3>
             <p class="chapter-desc">
-              Operações reais ativas: <strong>Simões Advogados</strong> (<code class="inline-code">atendi-simoesadv</code> na porta 3003 com Google Drive OAuth2), <strong>ITACRED</strong> (<code class="inline-code">atendi-itacred</code> na porta 3001), <strong>Dra. Jéssica</strong> (<code class="inline-code">atendi-DrJessica</code> na porta 3002) e <strong>Educred</strong> (<code class="inline-code">atendi-educred</code>).
+              Graduação em andamento na <strong>UCSAL (Universidade Católica do Salvador)</strong>, aprofundando engenharia de requisitos, testes e padrões de arquitetura distribuída.
             </p>
-            <div class="chapter-tags">
-              <span>simoesadv</span>
-              <span>itacred</span>
-              <span>DrJessica</span>
-              <span>educred</span>
-            </div>
-          </article>
-
-          <!-- Chapter 5 -->
-          <article class="chapter-card" data-step="5">
-            <div class="chapter-header">
-              <span class="chapter-num">05</span>
-              <span class="chapter-period">Business Intelligence</span>
-            </div>
-            <h3 class="chapter-title">Telemetria & BI em Tempo Real</h3>
-            <p class="chapter-desc">
-              Sistemas de Business Intelligence <code class="inline-code">Dash_producao</code>, <code class="inline-code">Dash_homo</code> e rastreamento de campanhas <code class="inline-code">super-tracker</code>. Filtros analíticos por data real do evento, rankings de conversão e relatórios de gargalos comerciais.
-            </p>
-            <div class="chapter-tags">
-              <span>Dash_producao</span>
-              <span>Dash_homo</span>
-              <span>super-tracker</span>
-            </div>
-          </article>
-
-          <!-- Chapter 6 -->
-          <article class="chapter-card" data-step="6">
-            <div class="chapter-header">
-              <span class="chapter-num">06</span>
-              <span class="chapter-period">Nova Geração</span>
-            </div>
-            <h3 class="chapter-title">Prospecção de Dados & ScoutX</h3>
-            <p class="chapter-desc">
-              Construção de aplicações modernas em TypeScript e ecossistema Vercel: <code class="inline-code">ScoutX</code> e <code class="inline-code">Scoutx-Final</code>. Motores de busca avançada, agregação de dados e inteligência comercial disponíveis em ambiente de homologação e produção live.
-            </p>
-            <div class="chapter-tags">
-              <span>ScoutX</span>
-              <span>TypeScript</span>
-              <span>Vercel Deploy</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- INTERACTIVE SYSTEM FLOW SIMULATOR (Inspired by g.ieffe.dev interactive GUI) -->
-    <section class="section sim-section" id="simulator-section">
-      <div class="container">
-        <div class="section-badge-center">
-          <span class="sub-badge">LABORATÓRIO INTERATIVO</span>
-        </div>
-        <h2 class="editorial-title text-center">
-          Simulador de Arquitetura & Fluxo de Dados
-        </h2>
-        <p class="section-lead text-center">
-          Experimente interativamente como uma oportunidade transita pelas instâncias isoladas, autenticações de API e banco de dados sem colisão de dados.
-        </p>
-
-        <div class="sim-dashboard">
-          
-          <!-- Controls Panel -->
-          <div class="sim-controls">
-            <div class="control-block">
-              <label class="control-label">1. Selecionar Instância / Cliente Alvo:</label>
-              <div class="instance-select-group" id="sim-instance-buttons">
-                <button class="inst-btn active" data-instance="simoesadv">
-                  <span class="inst-dot"></span>
-                  <strong>Simões Advogados</strong>
-                  <small>Porta 3003 • DB: simoesadv</small>
-                </button>
-                <button class="inst-btn" data-instance="itacred">
-                  <span class="inst-dot"></span>
-                  <strong>ITACRED Financeira</strong>
-                  <small>Porta 3001 • DB: itacred</small>
-                </button>
-                <button class="inst-btn" data-instance="drjessica">
-                  <span class="inst-dot"></span>
-                  <strong>Dra. Jéssica</strong>
-                  <small>Porta 3002 • DB: drjessica</small>
-                </button>
-                <button class="inst-btn" data-instance="educred">
-                  <span class="inst-dot"></span>
-                  <strong>Educred</strong>
-                  <small>Porta 3004 • DB: educred</small>
-                </button>
-              </div>
-            </div>
-
-            <div class="control-actions">
-              <button class="btn btn-primary" id="btn-run-simulation">
-                <span>⚡ Disparar Ingestão de Lead & Fluxo</span>
-              </button>
-              <button class="btn btn-secondary" id="btn-test-drive-api">
-                <span>📁 Simular Criação de Pasta no Drive</span>
-              </button>
-              <button class="btn btn-secondary" id="btn-test-round-robin">
-                <span>🔄 Testar Rodízio Round-Robin</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Visual Flow Diagram with Animation Nodes -->
-          <div class="sim-visualizer">
-            <div class="flow-canvas" id="flow-canvas">
-              
-              <!-- Node 1: Request Origin -->
-              <div class="flow-node node-client" id="node-origin">
-                <div class="node-icon">🌐</div>
-                <div class="node-name">Entrada do Lead</div>
-                <div class="node-status" id="status-origin">Standby</div>
-              </div>
-
-              <div class="flow-path path-1" id="path-1">
-                <div class="packet" id="packet-1"></div>
-              </div>
-
-              <!-- Node 2: Nginx Reverse Proxy -->
-              <div class="flow-node node-nginx" id="node-nginx">
-                <div class="node-icon">🛡️</div>
-                <div class="node-name">Nginx Proxy SSL</div>
-                <div class="node-status" id="status-nginx">Terminação HTTPS</div>
-              </div>
-
-              <div class="flow-path path-2" id="path-2">
-                <div class="packet" id="packet-2"></div>
-              </div>
-
-              <!-- Node 3: Container Instance -->
-              <div class="flow-node node-app" id="node-app">
-                <div class="node-icon">⚙️</div>
-                <div class="node-name" id="display-app-name">Instância Node.js (:3003)</div>
-                <div class="node-status" id="status-app">Duplo Funil SDR</div>
-              </div>
-
-              <div class="flow-branch">
-                <!-- Branch Left: Postgres -->
-                <div class="branch-col">
-                  <div class="flow-path path-v" id="path-db">
-                    <div class="packet" id="packet-db"></div>
-                  </div>
-                  <div class="flow-node node-db" id="node-db">
-                    <div class="node-icon">🗄️</div>
-                    <div class="node-name" id="display-db-name">PostgreSQL Isolado</div>
-                    <div class="node-status" id="status-db">172.17.0.1 (Rede Docker)</div>
-                  </div>
-                </div>
-
-                <!-- Branch Right: Google Drive API -->
-                <div class="branch-col">
-                  <div class="flow-path path-v" id="path-drive">
-                    <div class="packet" id="packet-drive"></div>
-                  </div>
-                  <div class="flow-node node-cloud" id="node-drive">
-                    <div class="node-icon">☁️</div>
-                    <div class="node-name">Google Drive v3</div>
-                    <div class="node-status" id="status-drive">OAuth2 Tokens</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Real-time Console Log Terminal -->
-            <div class="sim-terminal-output">
-              <div class="sim-term-header">
-                <span class="term-lights"><span></span><span></span><span></span></span>
-                <span class="term-title">Log de Execução em Tempo Real (Event Stream)</span>
-                <button class="term-clear-btn" id="btn-clear-sim-logs">Limpar</button>
-              </div>
-              <div class="sim-logs" id="sim-logs" aria-live="polite">
-                <div class="log-line text-muted">[SYSTEM READY] Servidor VPS Linux ativo. Selecione uma ação para inspecionar o fluxo de execução.</div>
-              </div>
-            </div>
-
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- INTERACTIVE UNIX CLI TERMINAL (Inspired by g.ieffe.dev) -->
-    <section class="section terminal-section" id="cli-terminal-section">
-      <div class="container">
-        <div class="section-badge-center">
-          <span class="sub-badge">TERMINAL DE ENGENHARIA</span>
-        </div>
-        <h2 class="editorial-title text-center">
-          Terminal Interativo CLI
-        </h2>
-        <p class="section-lead text-center">
-          Prefere explorar via linha de comando? Navegue pelos repositórios, inspecione portas VPS e execute consultas técnicas como um desenvolvedor.
-        </p>
-
-        <div class="terminal-shell-window" id="terminal-window">
-          <!-- Terminal Header -->
-          <div class="terminal-shell-header">
-            <div class="shell-buttons">
-              <span class="s-dot dot-red"></span>
-              <span class="s-dot dot-yellow"></span>
-              <span class="s-dot dot-green"></span>
-            </div>
-            <div class="shell-title">
-              weber@vps11814: ~/portfolio (bash 5.2) — Digite <strong class="hl-cmd">help</strong> para comandos
-            </div>
-            <div class="shell-actions">
-              <button class="shell-btn-pill" id="btn-term-help-trigger">Comandos Rápidos</button>
-            </div>
-          </div>
-
-          <!-- Terminal Screen Body -->
-          <div class="terminal-screen" id="terminal-screen">
-            <div class="term-welcome">
-              <pre class="ascii-banner">
- __          __  _                  _____ aldss
- \ \        / / | |                / ____|     |
-  \ \  /\  / /__| |__   ___ _ __  | |     __ _ |
-   \ \/  \/ / _ \ '_ \ / _ \ '__| | |    / _` ||
-    \  /\  /  __/ |_) |  __/ |    | |___| (_| ||
-     \/  \/ \___|_.__/ \___|_|     \_____\__,_||
-              Engenharia Full Stack & SaaS Multi-Tenant
-              GitHub: https://github.com/Webber03
-              </pre>
-              <p class="term-intro-text">
-                Bem-vindo ao terminal de engenharia de <strong>Weber Caldas</strong>.<br>
-                Digite <span class="cmd-chip">help</span> para listar comandos ou use:
-                <span class="cmd-chip" data-cmd="projects">projects</span>,
-                <span class="cmd-chip" data-cmd="cat simoesadv">cat simoesadv</span>,
-                <span class="cmd-chip" data-cmd="stats">stats</span>,
-                <span class="cmd-chip" data-cmd="ping vps">ping vps</span>,
-                <span class="cmd-chip" data-cmd="contact">contact</span>
-              </p>
-            </div>
-
-            <!-- Terminal History Injected Here -->
-            <div class="terminal-history" id="terminal-history"></div>
-
-            <!-- Active Prompt Input Line -->
-            <div class="terminal-input-line">
-              <span class="term-prompt-user">weber@vps</span><span class="term-prompt-sep">:</span><span class="term-prompt-dir">~/portfolio</span><span class="term-prompt-char">$</span>
-              <input type="text" id="terminal-input" class="term-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Comando do Terminal">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ALL PROJECTS CATALOG (Inspired by Blue Sky Eating taxonomy & Ine Agresta craft) -->
-    <section class="section projects-section" id="projects">
-      <div class="container">
-        
-        <div class="section-header-flex">
-          <div>
-            <div class="sub-badge">PORTFÓLIO COMPLETO</div>
-            <h2 class="editorial-title">Projetos Reais & Repositórios</h2>
-            <p class="section-lead">
-              Conheça as soluções de código aberto, plataformas proprietárias e instâncias corporativas desenvolvidas e mantidas por Weber Caldas.
-            </p>
-          </div>
-
-          <!-- Quick Live Stats Pill -->
-          <div class="catalog-summary-pill">
-            <span class="cat-stat-num">11</span>
-            <span class="cat-stat-label">Sistemas Documentados</span>
-          </div>
-        </div>
-
-        <!-- Real-Time Search Bar (Blue Sky Eating Style) -->
-        <div class="project-search-container">
-          <div class="search-input-wrapper">
-            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" id="project-search-input" placeholder="Pesquisar por projeto, tecnologia (ex: postgresql, oauth2, typescript, sdr)..." aria-label="Pesquisar projetos">
-            <button class="clear-search-btn" id="btn-clear-search" aria-label="Limpar pesquisa">&times;</button>
-          </div>
-        </div>
-
-        <!-- Category Filter Pills with Item Counts (Blue Sky Eating style) -->
-        <div class="filter-bar" id="filter-bar" role="tablist" aria-label="Filtro de Categorias">
-          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
-            <span>Todos os Projetos</span>
-            <span class="filter-count" id="count-all">11</span>
-          </button>
-          <button class="filter-btn" data-filter="saas" role="tab" aria-selected="false">
-            <span>SaaS Whitelabel</span>
-            <span class="filter-count" id="count-saas">5</span>
-          </button>
-          <button class="filter-btn" data-filter="dedicated" role="tab" aria-selected="false">
-            <span>Instâncias Dedicadas</span>
-            <span class="filter-count" id="count-dedicated">4</span>
-          </button>
-          <button class="filter-btn" data-filter="analytics" role="tab" aria-selected="false">
-            <span>BI & Dashboards</span>
-            <span class="filter-count" id="count-analytics">3</span>
-          </button>
-          <button class="filter-btn" data-filter="cloud" role="tab" aria-selected="false">
-            <span>Cloud & DevOps</span>
-            <span class="filter-count" id="count-cloud">4</span>
-          </button>
-          <button class="filter-btn" data-filter="prospect" role="tab" aria-selected="false">
-            <span>Dados & Prospecção</span>
-            <span class="filter-count" id="count-prospect">2</span>
-          </button>
-        </div>
-
-        <!-- Projects Grid: All 11 Projects Represented -->
-        <div class="projects-grid" id="projects-grid">
-
-          <!-- 1. Matriz Whitelabel / atendimento (Flagship Core) -->
-          <article class="project-card featured-card" data-category="saas cloud" data-name="atendimento crm whitelabel multi-tenant">
-            <div class="card-glow-overlay"></div>
-            <div class="project-header">
-              <span class="project-badge badge-matriz">Matriz SaaS Flagship</span>
-              <span class="project-status-dot active" title="Em Produção">Produção</span>
-            </div>
-            <h3 class="project-title">Plataforma Matriz CRM Whitelabel Multi-Tenant</h3>
-            <p class="project-summary">
-              O coração de toda a esteira: arquitetura base desenvolvida em Node.js com injeção dinâmica de identidade visual (<code class="inline-code">/api/whitelabel/config</code>), bancos PostgreSQL dedicados e zero hardcoded branding.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Stack:</span> Node.js, Express, PostgreSQL, JWT, Docker</div>
-              <div class="recipe-row"><span class="r-label">Diferencial:</span> Subida de nova empresa com branding e banco próprio em minutos.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Multi-Tenant</span>
-              <span class="tech-tag">Whitelabel API</span>
-              <span class="tech-tag">Docker</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-whitelabel">
-                <span>Ver Estudo Completo</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/atendimento" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver código no GitHub">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>atendimento</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 2. atendi-simoesadv (Simões Advogados) -->
-          <article class="project-card" data-category="saas dedicated cloud" data-name="simoesadv simoes advogados crm juridico google drive">
-            <div class="project-header">
-              <span class="project-badge badge-dedicated">Instância Dedicada :3003</span>
-              <span class="project-status-dot active">Ativa</span>
-            </div>
-            <h3 class="project-title">CRM Jurídico Simões Advogados</h3>
-            <p class="project-summary">
-              Instância exclusiva em VPS para advocacia previdenciária e cível. Criação automatizada de pastas no Google Drive API v3 via OAuth2, banco de dados isolado <code class="inline-code">simoesadv</code> e triagem documental em Kanban.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Domínio:</span> simoesadv.vps11814.panel.icontainer.work</div>
-              <div class="recipe-row"><span class="r-label">Google API:</span> Criação de pasta por cliente + backup na nuvem.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">PostgreSQL Dedicado</span>
-              <span class="tech-tag">Google Drive API</span>
-              <span class="tech-tag">OAuth2</span>
-              <span class="tech-tag">VPS Linux</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-simoes">
-                <span>Ver Estudo de Caso</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/atendi-simoesadv" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>atendi-simoesadv</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 3. atendi-itacred (ITACRED Correspondente Bancário) -->
-          <article class="project-card" data-category="saas dedicated" data-name="itacred correspondente bancario consignado credito financeiro">
-            <div class="project-header">
-              <span class="project-badge badge-dedicated">Instância Dedicada :3001</span>
-              <span class="project-status-dot active">Ativa</span>
-            </div>
-            <h3 class="project-title">CRM Financeiro ITACRED</h3>
-            <p class="project-summary">
-              Customização de CRM de alta rotatividade para correspondente bancário especializado em crédito consignado e antecipação de FGTS, com fila rápida de atendimento e esteira de aprovação.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Banco:</span> crm_itacred_db (PostgreSQL isolado)</div>
-              <div class="recipe-row"><span class="r-label">Foco:</span> Agilidade na qualificação e cálculo de margem consignável.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Fintech</span>
-              <span class="tech-tag">Crédito Consignado</span>
-              <span class="tech-tag">SLA Rigoroso</span>
-              <span class="tech-tag">Node.js</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-itacred">
-                <span>Ver Detalhes</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/atendi-itacred" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>atendi-itacred</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 4. atendi-DrJessica (Dra. Jéssica) -->
-          <article class="project-card" data-category="saas dedicated" data-name="drjessica dra jessica crm juridico medico contencioso">
-            <div class="project-header">
-              <span class="project-badge badge-dedicated">Instância Dedicada :3002</span>
-              <span class="project-status-dot active">Ativa</span>
-            </div>
-            <h3 class="project-title">CRM Especializado Dra. Jéssica</h3>
-            <p class="project-summary">
-              Instância exclusiva em VPS configurada com fluxo adaptado para atendimento contencioso e consultivo, gerenciando laudos médicos e documentos processuais sigilosos em banco independente.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Banco:</span> drjessica (Porta isolada 3002)</div>
-              <div class="recipe-row"><span class="r-label">Segurança:</span> Anonimização e proteção de dados médicos sensíveis.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Direito Médico</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Segurança</span>
-              <span class="tech-tag">Kanban</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-drjessica">
-                <span>Ver Detalhes</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/atendi-DrJessica" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>atendi-DrJessica</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 5. atendi-educred (Educred) -->
-          <article class="project-card" data-category="saas dedicated" data-name="educred credito educacional financiamento">
-            <div class="project-header">
-              <span class="project-badge badge-dedicated">Instância Dedicada</span>
-              <span class="project-status-dot active">Ativa</span>
-            </div>
-            <h3 class="project-title">CRM Educacional Educred</h3>
-            <p class="project-summary">
-              Instância especializada no segmento de financiamento estudantil e bolsas, orquestrando fluxos de envio de comprovantes de matrícula, contratos de fiadores e análise de crédito.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Segmento:</span> Crédito Estudantil e Financiamento</div>
-              <div class="recipe-row"><span class="r-label">Fluxo:</span> Triagem documental de alunos e responsáveis.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">EdTech</span>
-              <span class="tech-tag">Crédito</span>
-              <span class="tech-tag">Express.js</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-educred">
-                <span>Ver Detalhes</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/atendi-educred" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>atendi-educred</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 6. ScoutX & Scoutx-Final (TypeScript & Vercel) -->
-          <article class="project-card featured-card" data-category="prospect cloud" data-name="scoutx scoutx-final typescript prospecção inteligencia dados vercel">
-            <div class="card-glow-overlay"></div>
-            <div class="project-header">
-              <span class="project-badge badge-engine">TypeScript & Serverless</span>
-              <a href="https://scoutx-final.vercel.app" target="_blank" rel="noopener noreferrer" class="project-status-dot live-link" title="Abrir App Live">
-                scoutx-final.vercel.app ↗
-              </a>
-            </div>
-            <h3 class="project-title">ScoutX — Plataforma de Prospecção & Dados</h3>
-            <p class="project-summary">
-              Aplicação moderna desenvolvida em TypeScript para inteligência comercial, busca avançada de contatos e enriquecimento de bases com exportação estruturada.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Live App:</span> <a href="https://scoutx-final.vercel.app" target="_blank" class="accent-link">scoutx-final.vercel.app</a></div>
-              <div class="recipe-row"><span class="r-label">Stack:</span> TypeScript, Modern React/Next, Serverless APIs, Vercel CI/CD.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Vercel</span>
-              <span class="tech-tag">Data Scouting</span>
-              <span class="tech-tag">APIs REST</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://scoutx-final.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-card-details">
-                <span>Acessar Demo Live</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-              </a>
-              <a href="https://github.com/Webber03/Scoutx-Final" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>Scoutx-Final</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 7. Dash Produção & Dash Homo (BI Dashboards) -->
-          <article class="project-card" data-category="analytics saas" data-name="dash_producao dash_homo dashboard analitico bi business intelligence relatorios metricas">
-            <div class="project-header">
-              <span class="project-badge badge-analytics">Business Intelligence</span>
-              <span class="project-status-dot active">Produção</span>
-            </div>
-            <h3 class="project-title">Dashboards Analíticos (Dash_producao & Homo)</h3>
-            <p class="project-summary">
-              Módulo executivo de Business Intelligence em tempo real. Visualização de taxas de conversão de funil (SDR ➔ Closer ➔ Fechado), ranking de produtividade de consultores e controle de SLA.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Métricas:</span> SLA de resposta, volume de prospecção e taxa de ganho/perda.</div>
-              <div class="recipe-row"><span class="r-label">SQL:</span> Agregações temporais por data real de ocorrência dos eventos.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">BI & Analytics</span>
-              <span class="tech-tag">SQL Otimizado</span>
-              <span class="tech-tag">Real-Time</span>
-              <span class="tech-tag">KPIs</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-analytics">
-                <span>Ver Estudo de Caso</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/Dash_producao" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>Dash_producao</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 8. Duplo Funil & Algoritmo Round-Robin (Motor Comercial) -->
-          <article class="project-card" data-category="saas analytics" data-name="duplo funil sdr closer round-robin rodizio inteligente sla">
-            <div class="project-header">
-              <span class="project-badge badge-engine">Motor Comercial Core</span>
-              <span class="project-status-dot active">Ativo</span>
-            </div>
-            <h3 class="project-title">Motor Duplo Funil & Algoritmo Round-Robin</h3>
-            <p class="project-summary">
-              Algoritmo de rodízio automatizado de leads entre Closers ativos, passagem de bastão com 1-clique com histórico auditável e exigência de motivos de perda padronizados.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Algoritmo:</span> Fila circular equitativa com checagem de status online/offline.</div>
-              <div class="recipe-row"><span class="r-label">Impacto:</span> Fim do conflito comercial e garantia de atendimento no prazo.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Round-Robin</span>
-              <span class="tech-tag">Duplo Funil</span>
-              <span class="tech-tag">SLA Timers</span>
-              <span class="tech-tag">Kanban Drag & Drop</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-engine">
-                <span>Ver Estudo de Caso</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/atendimento" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>Código Fonte</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 9. super-tracker (Telemetria & Rastreamento) -->
-          <article class="project-card" data-category="analytics cloud" data-name="super-tracker rastreamento telemetria utm marketing conversoes">
-            <div class="project-header">
-              <span class="project-badge badge-cloud">Telemetria & Analytics</span>
-              <span class="project-status-dot active">Ativo</span>
-            </div>
-            <h3 class="project-title">Super Tracker — Telemetria de Conversão</h3>
-            <p class="project-summary">
-              Sistema de rastreamento de campanhas de tráfego pago, captura de parâmetros UTMs e identificação de jornada de aquisição do lead antes de entrar no funil de vendas do CRM.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Propósito:</span> Atribuição exata de ROI por campanha, canal e anúncio.</div>
-              <div class="recipe-row"><span class="r-label">Integração:</span> Injeção transparente de metadados na criação do lead.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Telemetria</span>
-              <span class="tech-tag">UTM Tracking</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">Marketing Ops</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-tracker">
-                <span>Ver Detalhes</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/super-tracker" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>super-tracker</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 10. SPRINT_LGPD (Segurança & Conformidade) -->
-          <article class="project-card" data-category="saas cloud" data-name="sprint_lgpd lgpd protecao dados seguranca conformidade compliance termos">
-            <div class="project-header">
-              <span class="project-badge badge-matriz">Segurança & LegalTech</span>
-              <span class="project-status-dot active">Compliance</span>
-            </div>
-            <h3 class="project-title">SPRINT_LGPD — Módulo de Conformidade</h3>
-            <p class="project-summary">
-              Arquitetura de governança para consentimento explícito, registro de opt-in/opt-out e retenção de logs de consentimento em conformidade estrita com a LGPD e sigilo bancário.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Conformidade:</span> Lei Geral de Proteção de Dados (Lei 13.709/2018).</div>
-              <div class="recipe-row"><span class="r-label">Features:</span> Termos dinâmicos, auditoria de acesso e expurgo de dados.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">LGPD</span>
-              <span class="tech-tag">Segurança</span>
-              <span class="tech-tag">Auditoria</span>
-              <span class="tech-tag">Data Governance</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-lgpd">
-                <span>Ver Detalhes</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/SPRINT_LGPD" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>SPRINT_LGPD</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- 11. validador & phpredirect (Utilitários & Proxies) -->
-          <article class="project-card" data-category="prospect cloud" data-name="validador phpredirect validacao cpf contratos proxy redirecionamento">
-            <div class="project-header">
-              <span class="project-badge badge-cloud">Infra & Utilitários</span>
-              <span class="project-status-dot active">Ativo</span>
-            </div>
-            <h3 class="project-title">Validador Documental & Proxy Redirect</h3>
-            <p class="project-summary">
-              Conjunto de ferramentas para validação sintática e algorítmica de CPFs, telefones no padrão E.164 e proxy PHP de redirecionamento dinâmico de tráfego com cabeçalhos seguros.
-            </p>
-            <div class="project-recipe-box">
-              <div class="recipe-row"><span class="r-label">Algoritmos:</span> Dígito verificador de CPF, regex telefônica e sanitização.</div>
-              <div class="recipe-row"><span class="r-label">Proxy:</span> Encaminhamento de leads com preservação de origem segura.</div>
-            </div>
-            <div class="project-tags">
-              <span class="tech-tag">Validações</span>
-              <span class="tech-tag">RegEx</span>
-              <span class="tech-tag">PHP Proxy</span>
-              <span class="tech-tag">Sanitização</span>
-            </div>
-            <div class="project-footer">
-              <button class="btn-card-details" data-modal="modal-validador">
-                <span>Ver Detalhes</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <a href="https://github.com/Webber03/validador" target="_blank" rel="noopener noreferrer" class="btn-card-github" title="Ver no GitHub">
-                <span>validador</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ARCHITECTURE & DEVOPS INFRASTRUCTURE SECTION -->
-    <section class="section arch-section" id="architecture">
-      <div class="container">
-        <div class="section-badge-center">
-          <span class="sub-badge">ENGENHARIA DE INFRAESTRUTURA</span>
-        </div>
-        <h2 class="editorial-title text-center">
-          Arquitetura de Produção em Alta Disponibilidade
-        </h2>
-        <p class="section-lead text-center">
-          Topologia real de execução no servidor VPS Linux com Nginx Proxy, orquestração de processos PM2 e isolamento de banco PostgreSQL.
-        </p>
-
-        <!-- Visual Architecture Map Box -->
-        <div class="arch-box">
-          <div class="arch-flow">
-            
-            <!-- Layer 1: Inbound Web Traffic -->
-            <div class="arch-step client-layer">
-              <div class="step-badge">Camada 01</div>
-              <div class="step-icon">🌐</div>
-              <h4>Internet / Clientes</h4>
-              <p>Tráfego Web criptografado via HTTPS com domínios personalizados por cliente.</p>
-              <div class="step-meta">Porta 443 / 80</div>
-            </div>
-
-            <div class="arch-arrow">
-              <span>Proxy SSL Let's Encrypt</span>
-              <svg width="32" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-
-            <!-- Layer 2: Nginx Reverse Proxy -->
-            <div class="arch-step reverse-proxy-layer">
-              <div class="step-badge">Camada 02</div>
-              <div class="step-icon">🛡️</div>
-              <h4>Nginx Reverse Proxy</h4>
-              <p>Roteamento virtual host por subdomínio para upstreams em portas locais isoladas.</p>
-              <div class="step-meta">UFW Firewall Ativo</div>
-            </div>
-
-            <div class="arch-arrow">
-              <span>Upstream Interno</span>
-              <svg width="32" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-
-            <!-- Layer 3: Application Clusters (PM2 / Node.js) -->
-            <div class="arch-step cluster-layer">
-              <div class="step-badge">Camada 03</div>
-              <div class="cluster-title">Servidor VPS Linux (Instâncias Isoladas)</div>
-              <div class="cluster-instances">
-                <div class="instance-pill">
-                  <span class="inst-name">ITACRED</span>
-                  <span class="inst-port">:3001</span>
-                </div>
-                <div class="instance-pill">
-                  <span class="inst-name">Dra. Jéssica</span>
-                  <span class="inst-port">:3002</span>
-                </div>
-                <div class="instance-pill active">
-                  <span class="inst-name">Simões Adv</span>
-                  <span class="inst-port">:3003</span>
-                </div>
-                <div class="instance-pill">
-                  <span class="inst-name">Educred</span>
-                  <span class="inst-port">:3004</span>
-                </div>
-              </div>
-              <div class="step-meta">Gerenciado via PM2 Cluster Daemon</div>
-            </div>
-
-            <div class="arch-arrow">
-              <span>Rede Docker 172.17.0.1</span>
-              <svg width="32" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
-
-            <!-- Layer 4: Storage & Cloud APIs -->
-            <div class="arch-step storage-layer">
-              <div class="step-badge">Camada 04</div>
-              <div class="step-icon">🗄️</div>
-              <h4>Postgres + Google Drive</h4>
-              <p>Bancos PostgreSQL 100% exclusivos por cliente e criação de pastas em nuvem via OAuth2.</p>
-              <div class="step-meta">Zero Shared Tables</div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Infrastructure Highlights Cards -->
-        <div class="infra-highlights-grid">
-          <div class="infra-card">
-            <div class="infra-icon">🔒</div>
-            <h4>Conformidade LGPD & Sigilo</h4>
-            <p>Bancos relacionais separados fisicamente com usuários e credenciais dedicadas. Se um cliente for cancelado, a exclusão da base não afeta nenhum outro.</p>
-          </div>
-          <div class="infra-card">
-            <div class="infra-icon">☁️</div>
-            <h4>Armazenamento em Nuvem Automatizado</h4>
-            <p>PDFs, contratos e laudos sobem diretamente para o Google Drive institucional do cliente através da Google Drive API v3, poupando espaço de disco no VPS.</p>
-          </div>
-          <div class="infra-card">
-            <div class="infra-icon">🔄</div>
-            <h4>Auto-Recuperação com PM2</h4>
-            <p>Monitoramento ativo de consumo de memória (RAM) com reinicialização automática pós-crash e subida de todos os serviços automaticamente no boot do sistema operacional.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SKILLS MATRIX -->
-    <section class="section skills-section" id="skills">
-      <div class="container">
-        <div class="section-badge-center">
-          <span class="sub-badge">COMPETÊNCIAS TÉCNICAS</span>
-        </div>
-        <h2 class="editorial-title text-center">
-          Stack Tecnológica & Domínios
-        </h2>
-        <p class="section-lead text-center">
-          Tecnologias dominadas na prática em projetos reais com código em produção ativa.
-        </p>
-
-        <div class="skills-grid">
-          
-          <!-- Category 1: Backend & Data -->
-          <div class="skill-category">
-            <div class="category-header">
-              <span class="cat-icon">⚙️</span>
-              <h3 class="category-title">Backend & Arquitetura de Dados</h3>
-            </div>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Node.js & Express.js</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">PostgreSQL & PgPool Isolado</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Autenticação JWT, Bcrypt & RBAC</span>
-                  <span class="skill-level">Especialista</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 96%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Arquiteturas SaaS Multi-Tenant</span>
-                  <span class="skill-level">Especialista</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">RESTful APIs & Webhooks</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Category 2: Frontend & UX -->
-          <div class="skill-category">
-            <div class="category-header">
-              <span class="cat-icon">💻</span>
-              <h3 class="category-title">Frontend & Engenharia Comercial</h3>
-            </div>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">JavaScript Moderno (ES6+)</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 94%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">TypeScript & Ecossistema Vercel</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 88%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Sistemas Kanban Drag & Drop</span>
-                  <span class="skill-level">Especialista</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">CSS3 Vanilla & Design Systems</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Dashboards Analíticos & Métricas BI</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Category 3: Cloud, APIs & DevOps -->
-          <div class="skill-category">
-            <div class="category-header">
-              <span class="cat-icon">☁️</span>
-              <h3 class="category-title">Cloud, Integrações & DevOps</h3>
-            </div>
-            <ul class="skill-list">
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Linux VPS (Ubuntu Server)</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Nginx Reverse Proxy & SSL Let's Encrypt</span>
-                  <span class="skill-level">Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 92%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Google Cloud (Drive API v3 & OAuth2)</span>
-                  <span class="skill-level">Especialista</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 94%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">PM2 Process Manager</span>
-                  <span class="skill-level">Especialista</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 96%;"></div></div>
-              </li>
-              <li>
-                <div class="skill-info">
-                  <span class="skill-name">Docker Containers & Redes Isoladas</span>
-                  <span class="skill-level">Intermediário / Avançado</span>
-                </div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT & CALL TO ACTION (Elegant Editorial Pitch) -->
-    <section class="section contact-section" id="contact">
+    <!-- CONTATO & CALL TO ACTION -->
+    <section class="section" id="contato">
       <div class="container">
         <div class="contact-card">
           <div class="contact-header">
-            <span class="sub-badge">VAMOS CONSTRUIR JUNTOS?</span>
             <h2 class="contact-title">
-              Pronto para transformar sua operação comercial com tecnologia sob medida.
+              Vamos construir soluções que geram resultado juntos?
             </h2>
             <p class="contact-desc">
-              Precisa de um CRM próprio Whitelabel, automações seguras em nuvem (Google APIs), migração para VPS Linux ou prospecção inteligente? Fale diretamente comigo:
+              Estou à disposição para novos desafios, projetos de CRM sob medida, automação de processos comerciais ou consultoria técnica.
             </p>
           </div>
 
           <div class="contact-methods">
             
-            <!-- Email Method -->
             <div class="method-item">
-              <span class="method-icon">✉️</span>
               <div class="method-info">
                 <span class="method-label">E-mail Direto</span>
                 <a href="mailto:jonathansacramento57@gmail.com" class="method-val" id="email-link">jonathansacramento57@gmail.com</a>
               </div>
-              <button class="btn-copy" id="btn-copy-email" title="Copiar e-mail para a área de transferência">
+              <button class="btn-copy" id="btn-copy-email" title="Copiar e-mail">
                 Copiar
               </button>
             </div>
 
-            <!-- WhatsApp Method -->
             <div class="method-item">
-              <span class="method-icon">💬</span>
               <div class="method-info">
-                <span class="method-label">WhatsApp Comercial</span>
-                <span class="method-val">Atendimento imediato para propostas e consultorias</span>
-              </div>
-              <a href="https://api.whatsapp.com/send?phone=5571999999999&text=Ol%C3%A1%20Weber!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="btn-action">
-                Abrir WhatsApp ↗
-              </a>
-            </div>
-
-            <!-- GitHub & LinkedIn Direct -->
-            <div class="method-item">
-              <span class="method-icon">🔗</span>
-              <div class="method-info">
-                <span class="method-label">Redes Profissionais</span>
-                <span class="method-val">Repositórios de código e conexões</span>
-              </div>
-              <div class="method-buttons-row">
-                <a href="https://github.com/Webber03" target="_blank" rel="noopener noreferrer" class="btn-action-outline">
-                  GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/weber-dev/" target="_blank" rel="noopener noreferrer" class="btn-action-outline">
-                  LinkedIn
-                </a>
+                <span class="method-label">WhatsApp / Telefone</span>
+                <a href="tel:+5571997413125" class="method-val">(71) 99741-3125</a>
               </div>
             </div>
 
-            <!-- Documentation Link -->
             <div class="method-item">
-              <span class="method-icon">📄</span>
               <div class="method-info">
-                <span class="method-label">Documentação Técnica</span>
-                <span class="method-val">Estudos de caso completos e especificações</span>
+                <span class="method-label">Localização</span>
+                <span class="method-val">Salvador, Bahia — Brasil</span>
               </div>
-              <a href="CASES_AND_PROJECTS.md" target="_blank" class="btn-action">
-                Ver CASES.md ↗
-              </a>
             </div>
 
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- LUXURY EDITORIAL FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <span class="brand-badge">&lt;WC/&gt;</span>
-        <div class="footer-copy">
-          <strong>Weber Caldas</strong>
-          <span>Engenheiro de Software Full Stack & Arquiteto CRM SaaS</span>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="footer-brand">Jonathan Weber Caldas</span>
+          <span class="footer-sub">Engenheiro de Software & Analista de Processos e Tecnologia</span>
         </div>
-      </div>
-      <div class="footer-center">
-        <a href="#hero">Início</a>
-        <a href="#journey">Trajetória</a>
-        <a href="#projects">Projetos</a>
-        <a href="#architecture">Arquitetura</a>
-        <a href="#skills">Stack</a>
-        <a href="#contact">Contato</a>
-      </div>
-      <div class="footer-right">
-        <span>© 2026 Weber Caldas. Concepção de alta performance.</span>
+        <div class="footer-links">
+          <a href="https://github.com/Webber03" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub @Webber03</a>
+          <a href="https://www.linkedin.com/in/weber-dev/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn @weber-dev</a>
+          <a href="#hero" class="footer-link">Voltar ao Topo ↑</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- DEEP-DIVE MODAL DRAWER (Ine Agresta & Ousmane Dembélé Inspired Detailed Viewer) -->
-  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" id="modal-close" aria-label="Fechar Modal">&times;</button>
-      <div class="modal-body" id="modal-body">
-        <!-- Injected dynamically via app.js -->
+  <!-- MODALS DE DETALHES -->
+  <div class="modal-overlay" id="modal-whitelabel" aria-hidden="true">
+    <div class="modal-container">
+      <button class="btn-modal-close" data-close-modal aria-label="Fechar modal">&times;</button>
+      <h3 class="modal-title">Atendimento CRM SaaS Whitelabel — Arquitetura</h3>
+      <div class="modal-meta-bar">
+        <span>Stack: Node.js, PostgreSQL, Docker, Nginx</span>
+        <span>•</span>
+        <span>Repositório: Webber03/atendimento</span>
+      </div>
+      <div class="modal-body">
+        <h4>Conceito & Solução</h4>
+        <p>
+          O sistema foi projetado para resolver o problema clássico de CRMs monolíticos: acomodar múltiplos inquilinos corporativos com requisitos visuais, regras de negócio e bancos de dados totalmente separados sem precisar replicar o código-fonte.
+        </p>
+        <h4>Diferenciais Técnicos</h4>
+        <ul>
+          <li><strong>Endpoint de Configuração Dinâmica:</strong> O frontend consome <code class="inline-code">/api/whitelabel/config</code> no carregamento e aplica logos, paletas CSS e títulos em milissegundos.</li>
+          <li><strong>Bancos de Dados Isolados:</strong> Instâncias corporativas como Simões Advogados e Itacred operam com instâncias PostgreSQL separadas para segurança e conformidade de dados.</li>
+          <li><strong>Motor Duplo Funil:</strong> Separação entre qualificação de leads (SDR) e negociação final (Closer), com algoritmo Round-Robin de distribuição balanceada.</li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+  <div class="modal-overlay" id="modal-operacional" aria-hidden="true">
+    <div class="modal-container">
+      <button class="btn-modal-close" data-close-modal aria-label="Fechar modal">&times;</button>
+      <h3 class="modal-title">Sistema de Operações & Automações Comerciais</h3>
+      <div class="modal-meta-bar">
+        <span>Organização: LF Promotora</span>
+        <span>•</span>
+        <span>Período: 2022 — Atual</span>
+      </div>
+      <div class="modal-body">
+        <h4>Contexto Operacional</h4>
+        <p>
+          Em operações comerciais de crédito e serviços financeiros, a velocidade de contato com o lead define o fechamento da venda. Antes da solução, planilhas descentralizadas e tarefas repetitivas causavam demora e perda de oportunidades.
+        </p>
+        <h4>Solução Desenvolvida</h4>
+        <ul>
+          <li>Criação de sistema próprio centralizado integrando APIs para consulta e validação de propostas em tempo real.</li>
+          <li>Automação de rotinas repetitivas em lote, poupando centenas de horas operacionais mensais da equipe.</li>
+          <li>Visão analítica clara para a supervisão acompanhar gargalos da esteira e tempos de resposta.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-infra" aria-hidden="true">
+    <div class="modal-container">
+      <button class="btn-modal-close" data-close-modal aria-label="Fechar modal">&times;</button>
+      <h3 class="modal-title">Infraestrutura VPS Linux & Google Cloud Vault</h3>
+      <div class="modal-meta-bar">
+        <span>Ambiente: Ubuntu Linux VPS, PM2, Google Drive API v3</span>
+      </div>
+      <div class="modal-body">
+        <h4>Arquitetura de Nuvem</h4>
+        <p>
+          Ambiente de produção construído para sustentar tráfego contínuo com alta resiliência e custo otimizado:
+        </p>
+        <ul>
+          <li><strong>Nginx Reverse Proxy:</strong> Gerencia terminação TLS com certificados automáticos Let's Encrypt e roteamento para as portas internas dos serviços.</li>
+          <li><strong>PM2 Cluster Manager:</strong> Garante uptime de 99.9%, reinicialização automática caso algum processo sofra exceção e monitoramento contínuo de memória.</li>
+          <li><strong>Google Drive API v3:</strong> Utilização do fluxo OAuth2 com refresh token para gravação em cofre em nuvem seguro de documentos e comprovantes dos clientes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
