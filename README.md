@@ -1,58 +1,70 @@
-# 💼 Portfólio Profissional - Weber Caldas (Full Stack & CRM Architect)
-
-Este diretório contém o material completo e a aplicação web interativa de portfólio baseada em **todos os projetos e soluções de alta complexidade desenvolvidos até o momento**.
+# 💼 Portfólio Profissional — Weber Caldas
+### Engenheiro de Software Full Stack & Arquiteto CRM SaaS
+> **GitHub**: [https://github.com/Webber03](https://github.com/Webber03) • **LinkedIn**: [https://www.linkedin.com/in/weber-dev/](https://www.linkedin.com/in/weber-dev/) • **E-mail**: [jonathansacramento57@gmail.com](mailto:jonathansacramento57@gmail.com)
 
 ---
 
-## 📂 Estrutura do Diretório `portfolio/`
+## 🎨 Síntese das 4 Referências de Design
+
+Este portfólio combina de forma coesa a identidade visual e as melhores práticas das seguintes referências:
+1. **[ousmaneballondor.fr](https://www.ousmaneballondor.fr/)**: Estética editorial dark de luxo com tipografia expressiva (*Syne* + *Outfit*), contadores de métricas animados (`4+`, `11+`, `100%`, `99.9%`), fita de marquee infinita, linha do tempo em 6 capítulos técnicos e efeitos sonoros Web Audio (com botão mute/unmute).
+2. **[g.ieffe.dev](https://g.ieffe.dev/)**: Barra superior com alternador de modos (*Showcase*, *Simulador*, *Terminal*), **Simulador de Arquitetura Interativo** com transmissão de pacotes e logs em tempo real, **Terminal Unix CLI** interativo com histórico (↑/↓) e comandos executáveis (`projects`, `cat simoesadv`, `ping vps`, `curl api`, `stats`, `sudo hire`), e rastreador de cursor luminoso.
+3. **[ineagresta.com](https://ineagresta.com/)**: Design refinado, acabamento visual apurado e **Modal de Estudo de Caso Aprofundado** com desafio, solução de engenharia, stack de código e resultados em produção.
+4. **[blueskyeating.com](https://blueskyeating.com/)**: Barra de busca instantânea em tempo real (filtra por nome, tecnologia ou tag), abas de taxonomia com contadores dinâmicos e caixas técnicas de "Receita da Solução" em cada card.
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```
 portfolio/
 ├── index.html               # Aplicação web moderna, interativa e responsiva do portfólio
-├── style.css                # Design system exclusivo (Dark Glassmorphism, tipografia premium e micro-animações)
-├── app.js                   # Lógica interativa (filtros de projetos, modal de estudo de caso, estatísticas)
-├── CASES_AND_PROJECTS.md    # Estudos de caso detalhados (desafios, arquitetura, soluções e métricas para propostas e LinkedIn)
-└── README.md                # Este guia de uso e instruções de deploy
+├── style.css                # Design system exclusivo (Luxury Dark, tipografia Syne/Outfit, animações)
+├── app.js                   # Lógica interativa (Simulador de fluxo, Terminal CLI, Web Audio, Busca e Modais)
+├── CASES_AND_PROJECTS.md    # Estudos de caso detalhados (desafios, arquitetura, soluções e métricas)
+└── README.md                # Este guia de uso e documentação técnica
 ```
 
 ---
 
-## 🌟 Projetos e Soluções em Destaque no Portfólio
+## 🌟 Todos os 11 Projetos & Repositórios Documentados
 
-1. **Plataforma SaaS CRM Whitelabel Multi-Tenant**:
-   - Arquitetura isolada por container e banco de dados PostgreSQL por cliente.
-   - Branding 100% dinâmico (logos, títulos, temas) via `.env` e endpoints dedicados.
-2. **Instância Dedicada Simões Advogados (`simoesadv`)**:
-   - Gestão jurídica de atendimento previdenciário e cível.
-   - Automação de documentação com Google Drive API e tokens OAuth2.
-3. **Engine Comercial com Duplo Funil (SDR + Closer)**:
-   - Rodízio inteligente de leads (Round-Robin).
-   - Regras de SLA em tempo real com alertas visuais e registro de motivos de perda.
-4. **Painel Analítico & BI em Tempo Real**:
-   - Gráficos e métricas de conversão baseados em datas reais de eventos.
-   - Ranking de produtividade para SDRs e Closers.
-5. **Infraestrutura Cloud & DevOps (VPS Linux)**:
-   - Nginx Reverse Proxy com SSL Let's Encrypt automático.
-   - Orquestração com PM2 e Docker em rede interna segura (`172.17.0.1`).
+1. **Plataforma Matriz CRM Whitelabel Multi-Tenant** (`atendimento`) — Core Whitelabel com injeção dinâmica de branding via API pública (`/api/whitelabel/config`), isolamento multi-tenant e RBAC.
+2. **CRM Jurídico Simões Advogados** (`atendi-simoesadv`) — Instância dedicada em VPS porta `3003` com PostgreSQL isolado e integração Google Drive API v3 OAuth2.
+3. **CRM Financeiro ITACRED** (`atendi-itacred`) — Instância dedicada em VPS porta `3001` especializada em crédito consignado e antecipação FGTS com regras rígidas de SLA.
+4. **CRM Especializado Dra. Jéssica** (`atendi-DrJessica`) — Instância dedicada em VPS porta `3002` com proteção a dados médicos sensíveis e contencioso.
+5. **CRM Educacional Educred** (`atendi-educred`) — Instância dedicada em VPS porta `3004` para financiamento estudantil e análise de fiadores.
+6. **ScoutX & Scoutx-Final** (`Scoutx-Final`) — Plataforma moderna de prospecção e inteligência comercial em TypeScript com deploy na Vercel ([scoutx-final.vercel.app](https://scoutx-final.vercel.app)).
+7. **Dashboards Analíticos** (`Dash_producao` & `Dash_homo`) — Módulo executivo de BI em tempo real com agregações SQL por data real de ocorrência.
+8. **Motor Comercial de Duplo Funil & Algoritmo Round-Robin** — Distribuição equitativa de oportunidades, passagem SDR ➔ Closer em 1 clique e auditoria de perda.
+9. **Super Tracker** (`super-tracker`) — Telemetria de conversão, captura de parâmetros UTM e atribuição de tráfego de campanhas.
+10. **SPRINT_LGPD** (`SPRINT_LGPD`) — Módulo de conformidade legal, opt-in/opt-out e retenção de logs com hashing criptográfico.
+11. **Validador Documental & Proxy Redirect** (`validador`, `phpredirect`) — Algoritmos de validação de CPF, padrão telefônico E.164 e proxies seguros.
 
 ---
 
-## 🚀 Como Visualizar Localmente
+## 🚀 Como Rodar Localmente
 
-Abra o arquivo `index.html` em qualquer navegador:
-- Dê dois cliques em `portfolio/index.html` ou abra com a extensão Live Server do VS Code / Antigravity IDE.
-- Ou via terminal na raiz do projeto:
-  ```bash
-  npx serve portfolio
-  ```
+O portfólio utiliza HTML5, CSS3 moderno e Vanilla JavaScript (zero dependências externas pesadas).
+
+### Opção 1: Servidor Python
+```bash
+python -m http.server 8080
+```
+Acesse em: `http://localhost:8080`
+
+### Opção 2: Servidor Node.js
+```bash
+npx serve .
+```
+
+### Opção 3: Direto no Navegador
+Basta abrir o arquivo `index.html` em qualquer navegador web.
 
 ---
 
-## 🌐 Opções Gratuitas de Hospedagem / Deploy
+## 🌐 Opções Gratuitas de Deploy
 
-1. **GitHub Pages**:
-   - Crie um repositório no GitHub para o portfólio e ative o GitHub Pages nas configurações.
-2. **Vercel / Netlify**:
-   - Arraste a pasta `portfolio` para a plataforma para ter deploy instantâneo com link HTTPS público.
-3. **Na VPS Própria (Nginx)**:
-   - Aponte um subdomínio (ex: `portfolio.seudominio.com`) para a pasta `portfolio`.
+1. **Vercel**: Execute `npx vercel` na pasta para deploy instantâneo com HTTPS.
+2. **GitHub Pages**: No repositório [Webber03/portfolio](https://github.com/Webber03), ative o GitHub Pages na aba *Settings > Pages*.
+3. **VPS Linux Próprio**: Aponte o proxy reverso Nginx para a pasta local com certificado Let's Encrypt.
