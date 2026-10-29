@@ -528,52 +528,69 @@
       </div>
     </section>
 
-    <!-- SIMULADOR INTERATIVO DE ARQUITETURA -->
+    <!-- SIMULADOR INTERATIVO DE ENGENHARIA & OPERAÇÃO -->
     <section class="section simulator-section" id="simulador-section">
       <div class="container">
         <div class="section-header">
           <h2 class="editorial-title">
-            Simulador de Arquitetura & Fluxo de Dados
+            Simulador de Atuação Técnica & Impacto Operacional
           </h2>
           <p class="section-lead">
-            Veja na prática como uma requisição de lead é processada através dos módulos da matriz até ser gravada com segurança no banco dedicado.
+            Veja na prática como atuo na engenharia de qualquer empresa: diagnosticando dores reais de negócio, desenvolvendo automações sob medida, subindo infraestruturas seguras e gerando eficiência contínua.
           </p>
         </div>
 
         <div class="simulator-box">
           <div class="sim-toolbar">
+            <div class="sim-scenario-selector" role="radiogroup" aria-label="Selecione o desafio operacional">
+              <button class="sim-scenario-btn active" data-scenario="automacao">
+                Automação de Processos & APIs
+              </button>
+              <button class="sim-scenario-btn" data-scenario="plataforma">
+                SaaS & Plataformas Sob Medida
+              </button>
+              <button class="sim-scenario-btn" data-scenario="infra">
+                Integrações em Nuvem & Infraestrutura
+              </button>
+            </div>
+
             <button class="sim-btn-play" id="btn-run-sim">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span>Disparar Fluxo de Lead</span>
+              <span>Executar Minha Atuação</span>
             </button>
-            <div class="sim-status-log" id="sim-status-log">
-              Aguardando início da simulação...
-            </div>
+          </div>
+
+          <div class="sim-status-log" id="sim-status-log">
+            Selecione um desafio corporativo acima e clique em "Executar Minha Atuação" para acompanhar o ciclo na prática...
           </div>
 
           <div class="sim-stage">
             <div class="sim-node" id="sim-node-1">
-              <span class="sim-node-label">NÓ 01</span>
-              <span class="sim-node-name">1. Entrada do Lead</span>
-              <span class="sim-node-sub">Web Form / API Inbound</span>
+              <span class="sim-node-dev-role">MINHA ATUAÇÃO: DIAGNÓSTICO</span>
+              <span class="sim-node-label">ETAPA 01</span>
+              <span class="sim-node-name" id="sim-node-1-title">1. Diagnóstico do Gargalo</span>
+              <span class="sim-node-sub" id="sim-node-1-sub">Mapeio processos manuais e tarefas repetitivas</span>
             </div>
 
             <div class="sim-node" id="sim-node-2">
-              <span class="sim-node-label">NÓ 02</span>
-              <span class="sim-node-name">2. Validação & LGPD</span>
-              <span class="sim-node-sub">Sanitização CPF / E.164</span>
+              <span class="sim-node-dev-role">MINHA ATUAÇÃO: ENGENHARIA</span>
+              <span class="sim-node-label">ETAPA 02</span>
+              <span class="sim-node-name" id="sim-node-2-title">2. Desenvolvimento de Scripts & APIs</span>
+              <span class="sim-node-sub" id="sim-node-2-sub">Crio rotinas de automação e conecto serviços</span>
             </div>
 
             <div class="sim-node" id="sim-node-3">
-              <span class="sim-node-label">NÓ 03</span>
-              <span class="sim-node-name">3. Round-Robin Dispatch</span>
-              <span class="sim-node-sub">Alocação SDR Ativo</span>
+              <span class="sim-node-dev-role">MINHA ATUAÇÃO: RESILIÊNCIA</span>
+              <span class="sim-node-label">ETAPA 03</span>
+              <span class="sim-node-name" id="sim-node-3-title">3. Agendamento & Monitoramento</span>
+              <span class="sim-node-sub" id="sim-node-3-sub">Configuro execuções contínuas com PM2/Linux</span>
             </div>
 
             <div class="sim-node" id="sim-node-4">
-              <span class="sim-node-label">NÓ 04</span>
-              <span class="sim-node-name">4. Banco PostgreSQL</span>
-              <span class="sim-node-sub">Persistência Isolada</span>
+              <span class="sim-node-dev-role">MINHA ATUAÇÃO: RESULTADO</span>
+              <span class="sim-node-label">ETAPA 04</span>
+              <span class="sim-node-name" id="sim-node-4-title">4. Eliminação de Retrabalho</span>
+              <span class="sim-node-sub" id="sim-node-4-sub">Processos rodam automaticamente sem erros humanos</span>
             </div>
           </div>
         </div>

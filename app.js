@@ -46,14 +46,100 @@ function initViewModeSelector() {
 function initSimulator() {
   const btnRun = document.getElementById('btn-run-sim');
   const statusLog = document.getElementById('sim-status-log');
+  const scenarioBtns = document.querySelectorAll('.sim-scenario-btn');
+
   const n1 = document.getElementById('sim-node-1');
   const n2 = document.getElementById('sim-node-2');
   const n3 = document.getElementById('sim-node-3');
   const n4 = document.getElementById('sim-node-4');
 
+  const t1 = document.getElementById('sim-node-1-title');
+  const s1 = document.getElementById('sim-node-1-sub');
+  const t2 = document.getElementById('sim-node-2-title');
+  const s2 = document.getElementById('sim-node-2-sub');
+  const t3 = document.getElementById('sim-node-3-title');
+  const s3 = document.getElementById('sim-node-3-sub');
+  const t4 = document.getElementById('sim-node-4-title');
+  const s4 = document.getElementById('sim-node-4-sub');
+
   if (!btnRun || !statusLog) return;
 
+  const SCENARIOS = {
+    automacao: {
+      name: 'Automação de Processos & APIs',
+      nodes: [
+        { title: '1. Diagnóstico do Gargalo', sub: 'Mapeio processos manuais e tarefas repetitivas' },
+        { title: '2. Desenvolvimento de Scripts & APIs', sub: 'Crio rotinas de automação e conecto serviços' },
+        { title: '3. Agendamento & Monitoramento', sub: 'Configuro execuções contínuas com PM2/Linux' },
+        { title: '4. Eliminação de Retrabalho', sub: 'Processos rodam automaticamente sem erros humanos' }
+      ],
+      logs: [
+        '[Passo 1/4 - Diagnóstico] Sento com a equipe para mapear o fluxo manual, identificar onde o tempo é desperdiçado e desenhar a arquitetura técnica...',
+        '[Passo 2/4 - Engenharia] Desenvolvo scripts em código limpo, realizo parsing de dados complexos e integro endpoints de APIs externas...',
+        '[Passo 3/4 - Resiliência] Subo as automações em servidor Linux com gerenciamento PM2, tolerância a falhas e alertas de execução...',
+        '[Passo 4/4 - Resultado] Automação 100% operacional! Centenas de horas poupadas para a empresa e zero erro operacional manual.'
+      ]
+    },
+    plataforma: {
+      name: 'SaaS & Plataformas Sob Medida',
+      nodes: [
+        { title: '1. Entendimento do Fluxo Comercial', sub: 'Mapeio funis, regras de negócio e permissões RBAC' },
+        { title: '2. Arquitetura Full Stack', sub: 'Desenvolvo frontend intuitivo e backend escalável' },
+        { title: '3. Banco Dedicado & Segurança', sub: 'Persistência isolada com PostgreSQL e autenticação JWT' },
+        { title: '4. Esteira Operacional Ágil', sub: 'Equipe comercial operando com máxima velocidade' }
+      ],
+      logs: [
+        '[Passo 1/4 - Diagnóstico] Alinho com a diretoria as regras de negócio, níveis de acesso (Admin/Supervisor/Operador) e SLAs de atendimento...',
+        '[Passo 2/4 - Engenharia] Construo a aplicação full stack modular, priorizando uma interface sem atrito e APIs REST de resposta rápida...',
+        '[Passo 3/4 - Resiliência] Configuro banco relacional dedicado por cliente, encriptação de senhas (Bcrypt) e isolamento total de dados...',
+        '[Passo 4/4 - Resultado] Plataforma corporativa no ar! Resposta imediata para os clientes e visibilidade analítica para a gestão.'
+      ]
+    },
+    infra: {
+      name: 'Integrações em Nuvem & Infraestrutura',
+      nodes: [
+        { title: '1. Análise de Custo & Escalabilidade', sub: 'Avalio tráfego, volume de documentos e nuvem' },
+        { title: '2. Conexão de APIs Cloud', sub: 'Integro Google Cloud (Drive v3), OAuth2 e webhooks' },
+        { title: '3. Proxy Nginx & SSL TLS 1.3', sub: 'Configuro servidor Linux com certificados e rate limit' },
+        { title: '4. Uptime 99.9% & Governança', sub: 'Infraestrutura blindada, rápida e de baixo custo' }
+      ],
+      logs: [
+        '[Passo 1/4 - Diagnóstico] Mapeio o volume de arquivos e segurança exigida, projetando uma arquitetura de nuvem econômica e escalável...',
+        '[Passo 2/4 - Engenharia] Desenvolvo integração com a Google Drive API v3 via OAuth2, upload assíncrono em chunks e validação de arquivos...',
+        '[Passo 3/4 - Resiliência] Configuro proxy reverso Nginx com cabeçalhos de segurança (HSTS/CSP), SSL TLS 1.3 e portas de banco isoladas...',
+        '[Passo 4/4 - Resultado] Infraestrutura de alta disponibilidade em produção! Uptime de 99.9% com armazenamento seguro em nuvem.'
+      ]
+    }
+  };
+
+  let activeScenario = 'automacao';
   let isRunning = false;
+
+  function updateScenarioUI(key) {
+    const data = SCENARIOS[key];
+    if (!data) return;
+
+    if (t1) t1.textContent = data.nodes[0].title;
+    if (s1) s1.textContent = data.nodes[0].sub;
+    if (t2) t2.textContent = data.nodes[1].title;
+    if (s2) s2.textContent = data.nodes[1].sub;
+    if (t3) t3.textContent = data.nodes[2].title;
+    if (s3) s3.textContent = data.nodes[2].sub;
+    if (t4) t4.textContent = data.nodes[3].title;
+    if (s4) s4.textContent = data.nodes[3].sub;
+
+    statusLog.textContent = `Desafio selecionado: ${data.name}. Clique em "Executar Minha Atuação" para simular...`;
+  }
+
+  scenarioBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (isRunning) return;
+      scenarioBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeScenario = btn.getAttribute('data-scenario') || 'automacao';
+      updateScenarioUI(activeScenario);
+    });
+  });
 
   btnRun.addEventListener('click', () => {
     if (isRunning) return;
@@ -62,28 +148,30 @@ function initSimulator() {
     btnRun.disabled = true;
     btnRun.style.opacity = '0.6';
 
-    // Step 1: Input
-    statusLog.textContent = '[1/4] Lead recebido via canal de entrada...';
+    const currentData = SCENARIOS[activeScenario];
+
+    // Step 1: Diagnóstico
+    statusLog.textContent = currentData.logs[0];
     n1?.classList.add('active-node');
     n2?.classList.remove('active-node');
     n3?.classList.remove('active-node');
     n4?.classList.remove('active-node');
 
     setTimeout(() => {
-      // Step 2: Validation
-      statusLog.textContent = '[2/4] Sanitizando CPF, validando telefones e aplicando LGPD...';
+      // Step 2: Engenharia
+      statusLog.textContent = currentData.logs[1];
       n1?.classList.remove('active-node');
       n2?.classList.add('active-node');
 
       setTimeout(() => {
-        // Step 3: Round Robin
-        statusLog.textContent = '[3/4] Fila Round-Robin alocando SDR disponível no CRM...';
+        // Step 3: Resiliência
+        statusLog.textContent = currentData.logs[2];
         n2?.classList.remove('active-node');
         n3?.classList.add('active-node');
 
         setTimeout(() => {
-          // Step 4: Database Persistence
-          statusLog.textContent = '[4/4] Gravado no banco PostgreSQL com sucesso. Transação concluída!';
+          // Step 4: Impacto
+          statusLog.textContent = currentData.logs[3];
           n3?.classList.remove('active-node');
           n4?.classList.add('active-node');
 
@@ -92,9 +180,9 @@ function initSimulator() {
             btnRun.style.opacity = '1';
             isRunning = false;
           }, 1200);
-        }, 800);
-      }, 800);
-    }, 800);
+        }, 950);
+      }, 950);
+    }, 950);
   });
 }
 
