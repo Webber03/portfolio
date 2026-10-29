@@ -25,19 +25,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Announcement Bar -->
-  <aside class="top-announcement" id="announcement-bar" aria-label="Status do Sistema">
-    <div class="announcement-content">
-      <span class="live-status-dot"></span>
-      <span class="announcement-text">
-        <strong>STATUS OPERACIONAL:</strong> Sistemas ativos em produção • Instâncias VPS operacionais • Uptime 99.9% • Salvador, BA
-      </span>
-      <a href="https://github.com/Webber03" target="_blank" rel="noopener noreferrer" class="announcement-link">
-        GitHub @Webber03
-      </a>
-    </div>
-  </aside>
-
   <!-- Navbar -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
@@ -105,7 +92,7 @@
 
             <h1 class="hero-title">
               Engenharia de software voltada para eficiência operacional real.
-              <span class="title-accent">Jonathan Weber Caldas</span>
+              <span class="title-accent">Jonathan Weber Sacramento Caldas</span>
             </h1>
 
             <p class="hero-lead">
@@ -154,7 +141,7 @@
                 </div>
                 <div class="profile-meta-row">
                   <span class="meta-label">Foco Principal</span>
-                  <span class="meta-value">CRM SaaS, Automação & UX Operacional</span>
+                  <span class="meta-value">IA, CRM, Automação & UX Operacional</span>
                 </div>
               </div>
             </div>
@@ -609,7 +596,7 @@
           </p>
         </div>
 
-        <div class="terminal-wrapper">
+        <div class="terminal-wrapper" id="terminal-window">
           <div class="terminal-header">
             <div class="terminal-dots">
               <span class="tdot tdot-red"></span>
@@ -617,19 +604,31 @@
               <span class="tdot tdot-green"></span>
             </div>
             <span class="terminal-title-text">weber@vps-production:~ (bash)</span>
-            <div></div>
+            <div class="terminal-quick-actions">
+              <button class="term-action-chip" data-cmd="help">help</button>
+              <button class="term-action-chip" data-cmd="whoami">whoami</button>
+              <button class="term-action-chip" data-cmd="skills">skills</button>
+              <button class="term-action-chip" data-cmd="projects">projects</button>
+              <button class="term-action-chip" data-cmd="contact">contact</button>
+              <button class="term-action-chip" data-cmd="clear">clear</button>
+            </div>
           </div>
 
           <div class="terminal-body" id="term-output">
             <div class="terminal-welcome">
-              Bem-vindo ao console de Weber Caldas [Jonathan Weber].<br>
-              Digite <strong>help</strong> para ver a lista de comandos disponíveis ou <strong>projects</strong> para inspecionar os repositórios.
+              Console Unix interativo de Weber Caldas [Jonathan Weber].<br>
+              Clique nos comandos rápidos acima ou digite: <span class="t-cmd" data-cmd="help">help</span>, <span class="t-cmd" data-cmd="whoami">whoami</span>, <span class="t-cmd" data-cmd="skills">skills</span>, <span class="t-cmd" data-cmd="projects">projects</span>, <span class="t-cmd" data-cmd="contact">contact</span>.
             </div>
 
-            <div class="terminal-prompt-row">
+            <div class="terminal-history" id="terminal-history"></div>
+
+            <form class="terminal-prompt-row" id="terminal-form" onsubmit="return false;">
               <span class="term-prompt-symbol">weber@vps:~$</span>
-              <input type="text" class="term-input" id="terminal-cli-input" placeholder="Digite um comando (ex: help, projects, skills)..." autocomplete="off" spellcheck="false">
-            </div>
+              <input type="text" class="term-input" id="terminal-cli-input" placeholder="Digite um comando aqui..." autocomplete="off" spellcheck="false">
+              <button type="submit" class="term-submit-btn" id="terminal-submit-btn" aria-label="Executar comando">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
