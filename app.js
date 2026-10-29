@@ -1,18 +1,3 @@
-/**
- * Jonathan Weber Sacramento Caldas — Portfolio Application
- * Clean Editorial Architecture
- * 
- * Modules:
- * 1. View Mode Switcher (Showcase / Simulador / Terminal)
- * 2. Architecture Flow Simulator (Animação de esteira em 4 nós)
- * 3. Embedded Unix CLI Terminal (help, whoami, skills, projects, contact, clear)
- * 4. Deep-Dive Modal System
- */
-
-// ==========================================================================
-// 1. View Mode Selector (Showcase / Simulador / Terminal)
-// ==========================================================================
-
 function initViewModeSelector() {
   const modeButtons = document.querySelectorAll('.mode-btn');
   const simSection = document.getElementById('simulador-section');
@@ -38,10 +23,6 @@ function initViewModeSelector() {
     });
   });
 }
-
-// ==========================================================================
-// 2. Interactive Flow Simulator
-// ==========================================================================
 
 function initSimulator() {
   const btnRun = document.getElementById('btn-run-sim');
@@ -150,7 +131,6 @@ function initSimulator() {
 
     const currentData = SCENARIOS[activeScenario];
 
-    // Step 1: Diagnóstico
     statusLog.textContent = currentData.logs[0];
     n1?.classList.add('active-node');
     n2?.classList.remove('active-node');
@@ -158,19 +138,16 @@ function initSimulator() {
     n4?.classList.remove('active-node');
 
     setTimeout(() => {
-      // Step 2: Engenharia
       statusLog.textContent = currentData.logs[1];
       n1?.classList.remove('active-node');
       n2?.classList.add('active-node');
 
       setTimeout(() => {
-        // Step 3: Resiliência
         statusLog.textContent = currentData.logs[2];
         n2?.classList.remove('active-node');
         n3?.classList.add('active-node');
 
         setTimeout(() => {
-          // Step 4: Impacto
           statusLog.textContent = currentData.logs[3];
           n3?.classList.remove('active-node');
           n4?.classList.add('active-node');
@@ -186,10 +163,6 @@ function initSimulator() {
   });
 }
 
-// ==========================================================================
-// 3. Embedded Unix CLI Terminal
-// ==========================================================================
-
 function initTerminal() {
   const terminalWindow = document.getElementById('terminal-window');
   const input = document.getElementById('terminal-cli-input');
@@ -199,7 +172,6 @@ function initTerminal() {
 
   if (!input || !history || !output) return;
 
-  // Clicking anywhere on the terminal window immediately focuses the input!
   terminalWindow?.addEventListener('click', (e) => {
     if (!e.target.closest('button') && !e.target.closest('.t-cmd')) {
       input.focus();
@@ -345,7 +317,6 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
     return p.innerHTML;
   }
 
-  // Handle Form Submit (Both desktop Enter and mobile virtual keyboards)
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -353,7 +324,6 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
     });
   }
 
-  // Keyboard navigation for history (Up/Down arrows)
   input.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp') {
       e.preventDefault();
@@ -373,7 +343,6 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
     }
   });
 
-  // Action chips in header
   document.querySelectorAll('.term-action-chip').forEach(chip => {
     chip.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -382,7 +351,6 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
     });
   });
 
-  // Clickable command triggers in text
   document.querySelectorAll('.t-cmd').forEach(el => {
     el.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -391,10 +359,6 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
     });
   });
 }
-
-// ==========================================================================
-// 4. Deep-Dive Modal System
-// ==========================================================================
 
 function initModals() {
   const modalTriggers = document.querySelectorAll('[data-modal]');
@@ -444,10 +408,6 @@ function initModals() {
     }
   });
 }
-
-// ==========================================================================
-// Initialize on DOM Ready
-// ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   initViewModeSelector();
