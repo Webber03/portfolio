@@ -204,23 +204,30 @@ Formação: SENAI CIMATEC (Técnico e Ford <Enter>) | UCSAL (Engenharia de Softw
 
     projects: `Projetos de Destaque:
 1. Atendimento CRM   - Plataforma Matriz Whitelabel Multi-Tenant (Duplo Funil SDR/Closer)
-2. ScoutX            - Plataforma de Prospecção & Inteligência de Dados (Live na Vercel)
-3. Operações LF      - Sistema sob medida de automação comercial e rotinas de crédito
-4. VPS & Cloud       - Infraestrutura dedicada Linux, cluster PM2 e cofre Google Drive API v3
-Dica: digite "cat crm" ou "cat scoutx" para inspecionar os detalhes técnicos.`,
+2. LF Promotora LP   - Landing Page Institucional & Captação Digital (lfpromotora.com.br)
+3. ScoutX            - Plataforma de Prospecção & Inteligência de Dados (TypeScript & React)
+4. Operações LF      - Sistema sob medida de automação comercial e rotinas de crédito
+5. VPS & Cloud       - Infraestrutura dedicada Linux, cluster PM2 e cofre Google Drive API v3
+Dica: digite "cat crm", "cat lf" ou "cat scoutx" para inspecionar os detalhes técnicos.`,
 
-    'cat crm': `[atendimento] Matriz CRM Whitelabel Multi-Tenant:
+    'cat crm': `[Atendimento CRM] Matriz Whitelabel Multi-Tenant:
 - Injeção dinâmica de identidade visual (/api/whitelabel/config)
 - Bancos PostgreSQL isolados com pools dedicados por inquilino
 - Separação entre qualificação de leads (SDR) e fechamento (Closer)
-- Sustenta instâncias em produção em escritórios jurídicos e financeiras
-Repositório: https://github.com/Webber03/atendimento`,
+- Sustenta instâncias corporativas em produção ativa
+- Status: Produção Corporativa Privada`,
+
+    'cat lf': `[LF Promotora] Landing Page Institucional & Captação Digital:
+- Site Oficial: https://lfpromotora.com.br/
+- Desenvolvido em Vite + React com carregamento ultrarrápido (< 1s)
+- Acessibilidade sênior: tipografia de alto contraste e fluxo intuitivo
+- Simulador interativo de crédito e roteamento direto para consultores LF`,
 
     'cat scoutx': `[ScoutX] Inteligência de Dados & Prospecção:
-- Desenvolvido em TypeScript e React moderno
+- Desenvolvido em TypeScript estrito e arquitetura modular em React
 - Busca e filtragem em tempo real de critérios corporativos
-- Publicado em produção na nuvem: https://scoutx-final.vercel.app
-Repositório: https://github.com/Webber03/Scoutx-Final`,
+- Interface otimizada com renderização de alta densidade de dados
+- Status: Operacional`,
 
     contact: `Informações de Contato Direto:
 - E-mail: jonathansacramento57@gmail.com
@@ -251,6 +258,9 @@ Repositório: https://github.com/Webber03/Scoutx-Final`,
     crm: 'cat crm',
     atendimento: 'cat crm',
     whitelabel: 'cat crm',
+    lf: 'cat lf',
+    lp: 'cat lf',
+    promotora: 'cat lf',
     scoutx: 'cat scoutx',
     scout: 'cat scoutx',
     contato: 'contact',
