@@ -313,11 +313,10 @@ p, li, .section-lead, .lead-text {
 }
 
 .hero-title {
-  font-family: var(--font-handwriting);
-  font-size: clamp(3rem, 5.8vw, 4.8rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
   margin-bottom: 24px;
   color: var(--text-primary);
 }
@@ -326,9 +325,11 @@ p, li, .section-lead, .lead-text {
   display: block;
   font-family: var(--font-handwriting);
   font-weight: 700;
-  font-size: 0.85em;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
 .hero-lead {
