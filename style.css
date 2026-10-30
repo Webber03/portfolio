@@ -127,9 +127,9 @@ p, li, .section-lead, .lead-text {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 700;
-  background: #0f172a;
-  color: #38bdf8;
-  border: 1px solid #1e293b;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: 1px solid var(--text-primary);
   padding: 4px 8px;
   border-radius: var(--radius-sm);
   letter-spacing: 0.04em;
@@ -322,7 +322,7 @@ p, li, .section-lead, .lead-text {
 .hero-title .title-accent {
   display: block;
   font-weight: 800;
-  color: #1e3a8a;
+  color: var(--text-primary);
 }
 
 .hero-lead {
@@ -452,9 +452,8 @@ p, li, .section-lead, .lead-text {
 .location-dot {
   width: 7px;
   height: 7px;
-  background: #10b981;
+  background: var(--text-primary);
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
   display: inline-block;
 }
 
@@ -541,7 +540,7 @@ p, li, .section-lead, .lead-text {
   font-family: var(--font-mono);
   font-size: 0.88rem;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--text-muted);
 }
 
 .skill-card-title {
@@ -587,34 +586,10 @@ p, li, .section-lead, .lead-text {
   font-weight: 600;
   padding: 4px 12px;
   border-radius: var(--radius-pill);
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  color: #1d4ed8;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
   margin-bottom: 14px;
-}
-
-.project-badge-tag.tag-slate {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
-  color: #334155;
-}
-
-.project-badge-tag.tag-emerald {
-  background: #ecfdf5;
-  border-color: #a7f3d0;
-  color: #047857;
-}
-
-.project-badge-tag.tag-amber {
-  background: #fffbeb;
-  border-color: #fde68a;
-  color: #b45309;
-}
-
-.project-badge-tag.tag-cyan {
-  background: #f0f9ff;
-  border-color: #bae6fd;
-  color: #0369a1;
 }
 
 .project-card-title {
@@ -893,15 +868,15 @@ p, li, .section-lead, .lead-text {
 }
 
 .sim-node.active-node {
-  border-color: #2563eb;
+  border-color: var(--border-strong);
   background: var(--bg-primary);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 .sim-node-dev-role {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: #2563eb;
+  color: var(--text-primary);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -1099,7 +1074,7 @@ p, li, .section-lead, .lead-text {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   font-weight: 700;
-  color: #2563eb;
+  color: var(--text-muted);
 }
 
 .chapter-period {
