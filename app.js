@@ -47,18 +47,18 @@ function initSimulator() {
 
   const SCENARIOS = {
     genai: {
-      name: 'Engenharia de IA & Pipelines GenAI',
+      name: 'Automações Inteligentes & Integração de IA',
       nodes: [
-        { title: '1. Ingestão & Sanitização', sub: 'Normalizo inputs não estruturados e documentos em payloads limpos' },
-        { title: '2. Contexto Semântico (RAG)', sub: 'Busca vetorial e injeção contextual com baixa latência' },
-        { title: '3. Orquestrador & Guardrails', sub: 'Execução de LLM com Function Calling e validação JSON' },
-        { title: '4. Decisão Autônoma no Negócio', sub: 'Ação integrada aos bancos e CRM com zero alucinação' }
+        { title: '1. Ingestão & Extração', sub: 'Estruturação de documentos e textos não estruturados em payloads limpos' },
+        { title: '2. Contexto & Regras de Negócio', sub: 'Recuperação de contexto e injeção de parâmetros corporativos' },
+        { title: '3. LLM API & Function Calling', sub: 'Execução de modelo com Function Calling tipado e validação de schema' },
+        { title: '4. Execução Integrada no Negócio', sub: 'Ação automatizada em bancos e CRM com rastreabilidade real' }
       ],
       logs: [
-        '[Passo 1/4 - Ingestão GenAI] Recebo e sanitizo dados brutos, documentos e mensagens, estruturando representações intermediárias limpas...',
-        '[Passo 2/4 - RAG & Contexto] Executo busca semântica em base de conhecimento vetorial, injetando regras de negócio e contexto relevante no prompt...',
-        '[Passo 3/4 - Orquestração LLM] Executo o modelo de linguagem com Function Calling tipado via JSON Schema e guardrails determinísticos ativos...',
-        '[Passo 4/4 - Resultado] Decisão corporativa concluída com sucesso! Integração instantânea aos bancos e CRM com zero alucinação e impacto real.'
+        '[Passo 1/4 - Ingestão de Dados] Recebo documentos e inputs comerciais não estruturados, transformando em payloads JSON limpos...',
+        '[Passo 2/4 - Contexto & Regras] Injeto contexto da empresa e parâmetros de negócio diretamente no prompt estruturado...',
+        '[Passo 3/4 - Integração LLM] Efetuo chamada de API com Function Calling tipado via JSON Schema e tratamento robusto de erros...',
+        '[Passo 4/4 - Resultado] Processo automatizado com sucesso! Integração instantânea ao CRM e rotinas operacionais sem atrito.'
       ]
     },
     automacao: {
@@ -217,17 +217,16 @@ Formação: SENAI CIMATEC (Técnico e Ford <Enter>) | UCSAL (Engenharia de Softw
 - Empatia com o Usuário Final: Interfaces limpas com foco em produtividade diária
 - Stack Técnica: Node.js, TypeScript, React, PostgreSQL, Docker, Linux VPS, Nginx, APIs Cloud`,
 
-    ai: `Engenharia de IA & Mentalidade AI-First:
-- Foco: Construir e integrar soluções de software robustas com produtos de IA e LLMs
-- Padrões Técnicos: RAG (Retrieval-Augmented Generation), Function Calling, Orquestração Multi-Agente
-- Rigor de Engenharia: Validação estrita de schemas de saída (JSON Schema), guardrails determinísticos,
-  prevenção ativa de alucinações, observabilidade de tokens e latência de inferência
-- Impacto Real: Automações que economizam centenas de horas operacionais e conectam IA a processos corporativos
-- Stack & Ferramentas: Python, TypeScript, OpenAI/Gemini/Claude APIs, Embeddings, PostgreSQL (pgvector), Docker, VPS
+    ai: `Engenharia de Software & IA Aplicada ao Negócio:
+- Foco: Construir software robusto que utiliza APIs de IA e LLMs para resolver gargalos reais de negócio
+- Padrões Técnicos: Extração estruturada (JSON Schema), Function Calling, automação de fluxos com APIs modernas
+- Rigor de Engenharia: Validação estrita de schemas, tratamento de exceções, observabilidade de latência e custo
+- Impacto Prático: Redução drástica de tempo operacional em análise de documentos e rotinas repetitivas
+- Stack: TypeScript, Node.js, Python, APIs de IA (OpenAI, Gemini, Anthropic), PostgreSQL, Docker, Linux VPS
 - Dica: digite "cat genai" ou "cat crm" para detalhes arquiteturais específicos.`,
 
     projects: `Projetos de Destaque:
-1. Esteira GenAI     - RAG, Extração Estruturada & Agentes Autônomos (AI Engineering)
+1. Automação com IA   - Extração Estruturada & Processos com LLMs (IA Aplicada)
 2. Atendimento CRM   - Plataforma Matriz Whitelabel Multi-Tenant (Duplo Funil SDR/Closer)
 3. LF Promotora LP   - Landing Page Institucional & Captação Digital (lfpromotora.com.br)
 4. ScoutX            - Plataforma de Prospecção & Inteligência de Dados (TypeScript & React)
@@ -235,10 +234,10 @@ Formação: SENAI CIMATEC (Técnico e Ford <Enter>) | UCSAL (Engenharia de Softw
 6. VPS & Cloud       - Infraestrutura dedicada Linux, cluster PM2 e cofre Google Drive API v3
 Dica: digite "cat genai", "cat crm", "cat lf" ou "cat scoutx" para inspecionar os detalhes técnicos.`,
 
-    'cat genai': `[Esteira GenAI] RAG, Extração Estruturada & Agentes Autônomos:
-- Arquitetura de recuperação contextual vetorial (RAG) para bases de conhecimento
-- Extração de entidades e parâmetros de contratos com Function Calling tipado
-- Guardrails e fallbacks determinísticos: zero alucinação em regras de negócio
+    'cat genai': `[Automação com IA] Extração Estruturada & Integração de Modelos de Linguagem:
+- Ingestão de documentos contratuais e extração determinística via Function Calling
+- Injeção de contexto e validação estrita com JSON Schema para evitar inconsistências
+- Conexão direta com APIs corporativas e bancos de dados relacionais
 - Status: Operacional em Produção`,
 
     'cat crm': `[Atendimento CRM] Matriz Whitelabel Multi-Tenant:
