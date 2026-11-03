@@ -47,63 +47,63 @@ function initSimulator() {
 
   const SCENARIOS = {
     genai: {
-      name: 'Automações Inteligentes & Integração de IA',
+      name: 'IA & Extração de Dados',
       nodes: [
-        { title: '1. Ingestão & Extração', sub: 'Estruturação de documentos e textos não estruturados em payloads limpos' },
-        { title: '2. Contexto & Regras de Negócio', sub: 'Recuperação de contexto e injeção de parâmetros corporativos' },
-        { title: '3. LLM API & Function Calling', sub: 'Execução de modelo com Function Calling tipado e validação de schema' },
-        { title: '4. Execução Integrada no Negócio', sub: 'Ação automatizada em bancos e CRM com rastreabilidade real' }
+        { title: '1. Leitura de Dados', sub: 'Recebimento de mensagens, contratos e PDFs para extração das informações-chave' },
+        { title: '2. Regras do Negócio', sub: 'Aplicação de diretrizes e regras comerciais para orientar as decisões da IA' },
+        { title: '3. Processamento & Validação', sub: 'Chamada aos modelos de IA com checagem rígida contra erros antes de salvar' },
+        { title: '4. Integração no Sistema', sub: 'Inserção automática no CRM ou banco de dados, poupando tempo da equipe' }
       ],
       logs: [
-        '[Passo 1/4 - Ingestão de Dados] Recebo documentos e inputs comerciais não estruturados, transformando em payloads JSON limpos...',
-        '[Passo 2/4 - Contexto & Regras] Injeto contexto da empresa e parâmetros de negócio diretamente no prompt estruturado...',
-        '[Passo 3/4 - Integração LLM] Efetuo chamada de API com Function Calling tipado via JSON Schema e tratamento robusto de erros...',
-        '[Passo 4/4 - Resultado] Processo automatizado com sucesso! Integração instantânea ao CRM e rotinas operacionais sem atrito.'
+        '[Passo 1/4 - Leitura de Dados] Recebo documentos e textos brutos, organizando as informações essenciais em formato limpo...',
+        '[Passo 2/4 - Regras de Negócio] Injeto o contexto e as regras comerciais da empresa para garantir respostas precisas e seguras...',
+        '[Passo 3/4 - Processamento & Validação] Envio para o modelo de IA e valido o formato da resposta, prevenindo dados incorretos...',
+        '[Passo 4/4 - Integração Final] Dados aprovados e inseridos no sistema automaticamente, sem retrabalho manual para a equipe.'
       ]
     },
     automacao: {
-      name: 'Automação de Processos & APIs',
+      name: 'Automação de Tarefas',
       nodes: [
-        { title: '1. Diagnóstico do Gargalo', sub: 'Mapeio processos manuais e tarefas repetitivas' },
-        { title: '2. Desenvolvimento de Scripts & APIs', sub: 'Crio rotinas de automação e conecto serviços' },
-        { title: '3. Agendamento & Monitoramento', sub: 'Configuro execuções contínuas com PM2/Linux' },
-        { title: '4. Eliminação de Retrabalho', sub: 'Processos rodam automaticamente sem erros humanos' }
+        { title: '1. Mapeamento da Rotina', sub: 'Identificação de onde a equipe perde tempo com tarefas manuais e repetitivas' },
+        { title: '2. Criação do Script & APIs', sub: 'Desenvolvimento do código e conexão direta entre os sistemas da empresa' },
+        { title: '3. Execução Contínua', sub: 'Configuração no servidor Linux com alertas automáticos em caso de falha' },
+        { title: '4. Economia de Tempo', sub: 'Processos finalizados em segundos, sem falhas humanas ou retrabalho' }
       ],
       logs: [
-        '[Passo 1/4 - Diagnóstico] Sento com a equipe para mapear o fluxo manual, identificar onde o tempo é desperdiçado e desenhar a arquitetura técnica...',
-        '[Passo 2/4 - Engenharia] Desenvolvo scripts em código limpo, realizo parsing de dados complexos e integro endpoints de APIs externas...',
-        '[Passo 3/4 - Resiliência] Subo as automações em servidor Linux com gerenciamento PM2, tolerância a falhas e alertas de execução...',
-        '[Passo 4/4 - Resultado] Automação 100% operacional! Centenas de horas poupadas para a empresa e zero erro operacional manual.'
+        '[Passo 1/4 - Diagnóstico] Converso com o time para entender a rotina manual e mapear onde o tempo é desperdiçado...',
+        '[Passo 2/4 - Desenvolvimento] Crio scripts rápidos e integro os sistemas via APIs para que conversem entre si sem atrito...',
+        '[Passo 3/4 - Servidor] Subo a automação no servidor para rodar 24/7 com monitoramento contínuo e tolerância a falhas...',
+        '[Passo 4/4 - Resultado] Rotina 100% automatizada! A empresa poupa dezenas de horas semanais com dados sempre em dia.'
       ]
     },
     plataforma: {
-      name: 'SaaS & Plataformas Sob Medida',
+      name: 'Sistemas Sob Medida',
       nodes: [
-        { title: '1. Entendimento do Fluxo Comercial', sub: 'Mapeio funis, regras de negócio e permissões RBAC' },
-        { title: '2. Arquitetura Full Stack', sub: 'Desenvolvo frontend intuitivo e backend escalável' },
-        { title: '3. Banco Dedicado & Segurança', sub: 'Persistência isolada com PostgreSQL e autenticação JWT' },
-        { title: '4. Esteira Operacional Ágil', sub: 'Equipe comercial operando com máxima velocidade' }
+        { title: '1. Entendimento do Fluxo', sub: 'Definição de regras comerciais, níveis de acesso e necessidades dos usuários' },
+        { title: '2. Construção da Aplicação', sub: 'Desenvolvimento de telas intuitivas e uma estrutura de código rápida e estável' },
+        { title: '3. Banco Dedicado & Proteção', sub: 'Banco de dados isolado (PostgreSQL) com senhas e dados totalmente criptografados' },
+        { title: '4. Operação Ágil', sub: 'Equipe trabalhando com velocidade e relatórios analíticos em tempo real' }
       ],
       logs: [
-        '[Passo 1/4 - Diagnóstico] Alinho com a diretoria as regras de negócio, níveis de acesso (Admin/Supervisor/Operador) e SLAs de atendimento...',
-        '[Passo 2/4 - Engenharia] Construo a aplicação full stack modular, priorizando uma interface sem atrito e APIs REST de resposta rápida...',
-        '[Passo 3/4 - Resiliência] Configuro banco relacional dedicado por cliente, encriptação de senhas (Bcrypt) e isolamento total de dados...',
-        '[Passo 4/4 - Resultado] Plataforma corporativa no ar! Resposta imediata para os clientes e visibilidade analítica para a gestão.'
+        '[Passo 1/4 - Alinhamento] Mapeio quem usará o sistema (operador, gestor, admin) e quais etapas aceleram a rotina comercial...',
+        '[Passo 2/4 - Engenharia Full Stack] Construo uma interface limpa e APIs rápidas que respondem de imediato, sem travamentos...',
+        '[Passo 3/4 - Segurança & Banco] Isolo o banco de dados dedicado com PostgreSQL e aplico criptografia para proteger dados sensíveis...',
+        '[Passo 4/4 - Sistema no Ar] Plataforma entregue em produção! Atendimento mais rápido aos clientes e controle total para a gestão.'
       ]
     },
     infra: {
-      name: 'Integrações em Nuvem & Infraestrutura',
+      name: 'Nuvem & Servidores',
       nodes: [
-        { title: '1. Análise de Custo & Escalabilidade', sub: 'Avalio tráfego, volume de documentos e nuvem' },
-        { title: '2. Conexão de APIs Cloud', sub: 'Integro Google Cloud (Drive v3), OAuth2 e webhooks' },
-        { title: '3. Proxy Nginx & SSL TLS 1.3', sub: 'Configuro servidor Linux com certificados e rate limit' },
-        { title: '4. Uptime 99.9% & Governança', sub: 'Infraestrutura blindada, rápida e de baixo custo' }
+        { title: '1. Planejamento de Custos', sub: 'Análise de tráfego e armazenamento para estruturar uma nuvem econômica' },
+        { title: '2. Conexão com Serviços Cloud', sub: 'Conexão segura com Google Drive, disparos de email e webhooks externos' },
+        { title: '3. Servidor & Certificado SSL', sub: 'Servidor Linux com cadeado de segurança (HTTPS) e bloqueio a acessos suspeitos' },
+        { title: '4. Alta Estabilidade (99,9%)', sub: 'Sistema sempre online, com carregamento veloz e baixo custo de manutenção' }
       ],
       logs: [
-        '[Passo 1/4 - Diagnóstico] Mapeio o volume de arquivos e segurança exigida, projetando uma arquitetura de nuvem econômica e escalável...',
-        '[Passo 2/4 - Engenharia] Desenvolvo integração com a Google Drive API v3 via OAuth2, upload assíncrono em chunks e validação de arquivos...',
-        '[Passo 3/4 - Resiliência] Configuro proxy reverso Nginx com cabeçalhos de segurança (HSTS/CSP), SSL TLS 1.3 e portas de banco isoladas...',
-        '[Passo 4/4 - Resultado] Infraestrutura de alta disponibilidade em produção! Uptime de 99.9% com armazenamento seguro em nuvem.'
+        '[Passo 1/4 - Diagnóstico Cloud] Analiso o volume de acessos e arquivos para desenhar uma estrutura de nuvem enxuta e econômica...',
+        '[Passo 2/4 - Conexões Externas] Conecto ferramentas em nuvem (como Google Cloud) usando autenticação segura e envio assíncrono...',
+        '[Passo 3/4 - Blindagem do Servidor] Configuro o servidor Linux com Nginx, certificados SSL automáticos e proteção de portas...',
+        '[Passo 4/4 - Alta Disponibilidade] Servidor 99,9% estável no ar! Navegação instantânea, arquivos seguros e custo sob controle.'
       ]
     }
   };
@@ -124,7 +124,7 @@ function initSimulator() {
     if (t4) t4.textContent = data.nodes[3].title;
     if (s4) s4.textContent = data.nodes[3].sub;
 
-    statusLog.textContent = `Desafio selecionado: ${data.name}. Clique em "Executar Minha Atuação" para simular...`;
+    statusLog.textContent = `Cenário selecionado: ${data.name}. Clique em "Executar Demonstração" para simular...`;
   }
 
   scenarioBtns.forEach(btn => {

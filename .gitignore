@@ -1,0 +1,13 @@
+# IDE & Agent data
+.agent/
+.cursor/
+.gemini/
+
+# Temporary python testing scripts
+*.py
+__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
+
