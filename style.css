@@ -124,16 +124,18 @@ p, li, .section-lead, .lead-text {
   color: var(--text-primary);
 }
 
-.brand-badge {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 700;
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  border: 1px solid var(--text-primary);
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  letter-spacing: 0.04em;
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform var(--transition-fast);
+}
+
+.nav-brand:hover .brand-icon {
+  transform: scale(1.06);
 }
 
 .brand-text-group {
